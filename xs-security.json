@@ -1,17 +1,38 @@
 {
-    "xsappname" : "btp-procurement-data-extractor",
-    "tenant-mode" : "dedicated",
-    "scopes": [
-      {
-        "name": "$XSAPPNAME.JobScheduler",
-        "description": "JobScheduler",
-        "grant-as-authority-to-apps": ["$XSSERVICENAME(btp-procurement-data-extractor-jobscheduler)"]
-      }
+  "xsappname": "btp-procurement-data-extractor",
+  "tenant-mode": "shared",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.JobScheduler",
+      "description": "JobScheduler",
+      "grant-as-authority-to-apps": [
+        "$XSSERVICENAME(btp-procurement-data-extractor-jobscheduler)"
+      ]
+    }
+  ],
+  "authorities": [
+    "$ACCEPT_GRANTED_AUTHORITIES"
+  ],
+  "role-templates": [
+    {
+      "name": "JobScheduler",
+      "description": "Job Scheduler",
+      "scope-references": [
+        "$XSAPPNAME.JobScheduler"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "system-attributes": [
+      "groups",
+      "rolecollections"
     ],
-    "authorities":["$ACCEPT_GRANTED_AUTHORITIES"],
-    "role-templates": [ { 
-      "name"               : "JobScheduler", 
-      "description"        : "Job Scheduler", 
-      "scope-references"   : [ "$XSAPPNAME.JobScheduler"]
-      }]
+    "redirect-uris": [
+      "https://**.cfapps.eu10.hana.ondemand.com/**",
+      "https://**.cfapps.eu10-004.hana.ondemand.com/**",
+      "https://bocauth.us1.sapbusinessobjects.cloud/**",
+      "https://bocauth.us1.sapbusinessobjects.cloud:443/**",
+      "https://bocauth.us1.sapbusinessobjects.cloud:443"
+    ]
+  }
 }
