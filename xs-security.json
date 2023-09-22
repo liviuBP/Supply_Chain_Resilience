@@ -1,6 +1,6 @@
 {
   "xsappname": "btp-procurement-data-extractor",
-  "tenant-mode": "shared",
+  "tenant-mode"   : "shared",
   "scopes": [
     {
       "name": "$XSAPPNAME.JobScheduler",

@@ -73,6 +73,9 @@ using from './invoices/PrereconciledInvoices';
 using from './invoices/OneTimeVendors';
 using from './invoices/Invoices';
 
+//custom table
+using from './custom_tabels/CountryRiskScores';
+
 //suppliers
 using from './suppliers/Suppliers';
 using from './suppliers/SLPSuppliers';

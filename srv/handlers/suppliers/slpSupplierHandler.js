@@ -161,6 +161,7 @@ function insertData(aData, realm)  {
 
 }
 
+
 async function _FullLoadQualifications( Qualifications, Realm, SMVendorId, srv ){
     return new Promise(async (resolve,reject) =>{
        // const srv = cds.transaction(regions);

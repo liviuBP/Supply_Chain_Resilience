@@ -92,13 +92,19 @@ const contractWorkspaceOSHandler = require('../contracts/contractWorkspaceOSHand
 
 const auditEntryHandler = require('../sourcing/auditEntryHandler');
 
+//our function
+const countryRiskHandler = require('../custom_handler/CountryRiskScores');
+
 
 async function ProcessData(viewTemplateName,Records,realm){
     //Routes the extracted data to the appropriate processing handler
     return new Promise(async (resolve,reject)=>{
         try{
-
+            
+            
             let affectedRows;
+            affectedRows = await countryRiskHandler.insertData(Records, realm);
+            affectedRows = [];
             switch(viewTemplateName){
                 //Analytical API
                 case "EXT_InvoiceLineItemSA":
@@ -322,6 +328,7 @@ async function ProcessData(viewTemplateName,Records,realm){
                 case "EXT_OP_Contract":
                     affectedRows = await contractsOSHandler.insertData(Records, realm);
                     break;
+                
 
                 default:
                     logger.warn(`No handler for template ${viewTemplateName} data processing skipped.`);

@@ -7,6 +7,13 @@ service sac @(path:'/sac')    {
 
 
     /**master data */
+
+    //Custom tables
+
+    @readonly
+    entity CountryRiskScores as projection on entities.CountryRiskScores;
+
+    //end custom data table
     @readonly
     entity CommodityCode as projection on entities.CommodityCode;
 

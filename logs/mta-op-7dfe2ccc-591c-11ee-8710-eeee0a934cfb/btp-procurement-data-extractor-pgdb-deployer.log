@@ -1,0 +1,500 @@
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:43.264140] Uploading app package for app with guid 5b140137-b616-44a1-a3ce-5034f7e13011 (STDOUT, API)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:43.423855] Updated app with guid 5b140137-b616-44a1-a3ce-5034f7e13011 ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"}) (STDOUT, API)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:53.310038] Scaling process: "web" (STDOUT, API)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:53.676833] Creating build for app with guid 5b140137-b616-44a1-a3ce-5034f7e13011 (STDOUT, API)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:54.167817] Downloading nodejs_buildpack... (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:54.203595] Downloaded nodejs_buildpack (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:54.203669] Cell 7b8b35bc-9859-4a8a-86aa-886d9bd3a3ab creating container for instance c0f1a964-34b1-4c12-b70e-7e6f9e16d433 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:54.549676] Security group rules were updated (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:54.560870] Cell 7b8b35bc-9859-4a8a-86aa-886d9bd3a3ab successfully created container for instance c0f1a964-34b1-4c12-b70e-7e6f9e16d433 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:54.739806] Downloading build artifacts cache... (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:54.739824] Downloading app package... (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:02.970#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7872###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:49:54.789171] Downloaded app package (99.5K) (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:03.539159] Downloaded build artifacts cache (394.4M) (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:05.850418] -----> Download go 1.19 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:09.659450] -----> Running go build supply (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:09.659469] /tmp/buildpackdownloads/0c563da8cbb082d857627dbee966072d ~ (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:10.689773] ~ (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:10.692491] -----> Apt Buildpack version 0.3.0 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:10.693190] -----> Adding apt keys (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:10.730780] Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)). (STDERR, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:11.059541] gpg: key 740AEEA2: "jenkins" not changed (STDERR, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:11.059560] gpg: Total number processed: 1 (STDERR, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:11.059564] gpg:              unchanged: 1 (STDERR, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:11.096168] Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)). (STDERR, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:11.431054] gpg: key 3ABCFE23: "SapMachine (https://sapmachine.io) <sapmachine@sap.com>" not changed (STDERR, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:11.431070] gpg: Total number processed: 1 (STDERR, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:11.431072] gpg:              unchanged: 1 (STDERR, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:11.433127] -----> Adding apt repos (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:12.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18263###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:11.433180] -----> Updating apt cache (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:23.035#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9514###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:13.359121] -----> Downloading apt packages (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078237] Reading package lists... (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078249] Building dependency tree... (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078253] The following additional packages will be installed: (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078256] alsa-topology-conf alsa-ucm-conf libasound2 libasound2-data libnspr4 libnss3 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078259] libxi6 libxtst6 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078261] Suggested packages: (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078266] libasound2-plugins alsa-utils (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078268] The following NEW packages will be installed: (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078271] alsa-topology-conf alsa-ucm-conf libasound2 libasound2-data libnspr4 libnss3 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078273] libxi6 libxtst6 sapmachine-11-jdk (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078275] 0 upgraded, 9 newly installed, 0 to remove and 49 not upgraded. (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078277] Need to get 166 MB/168 MB of archives. (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078279] After this operation, 325 MB of additional disk space will be used. (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078280] Get:1 http://dist.sapmachine.io/debian/amd64 ./ sapmachine-11-jdk 11.0.20.1 [166 MB] (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078281] Fetched 166 MB in 9s (18.6 MB/s) (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078283] Download complete and in download only mode (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078284]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.078285] -----> Installing apt packages (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.083627]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.103251]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.125497]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.131964]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.143369]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.145480]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.221967]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.226412]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:23.230572]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:33.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18315###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:31.686065]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:43.140#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18327###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:40.103042]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:48.527276]  (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:48.531469] -----> Nodejs Buildpack version 1.8.12 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:48.534793] -----> Bootstrapping python (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:48.534803] -----> Installing python 3.10.12 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:48.534848] Copy [/tmp/buildpacks/308d5b7d852de4cb71da250d99318fc4/dependencies/7f9efd1e57d1b3c61112ca264050c7e6/python_3.10.12_linux_x64_cflinuxfs4_94744ec2.tgz] (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:50.522736] -----> Installing binaries (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:50.522826] engines.node (package.json): >=12 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:50.522840] engines.npm (package.json): unspecified (use default) (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:50.522845] [31;1m**WARNING**[0m Dangerous semver range (>) in engines.node. See: http://docs.cloudfoundry.org/buildpacks/node/node-tips.html (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:50.522854] -----> Installing node 20.4.0 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:50.522922] Copy [/tmp/buildpacks/308d5b7d852de4cb71da250d99318fc4/dependencies/f6387b6262e2167e018d9710ffe2829c/node_20.4.0_linux_x64_cflinuxfs4_124f279a.tgz] (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.017684] Using default npm version: 9.7.2 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.017700] -----> Installing yarn 1.22.19 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.017783] Copy [/tmp/buildpacks/308d5b7d852de4cb71da250d99318fc4/dependencies/0f06052381cbcef1593bd279ca3d9458/yarn_1.22.19_linux_noarch_any-stack_32d0e82e.tgz] (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.244059] Installed yarn 1.22.19 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.244073] -----> Creating runtime environment (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245058] [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245068] Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245070] NODE_ENV=production (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245072] NODE_HOME=/tmp/contents3356443502/deps/1/node (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245073] NODE_MODULES_CACHE=true (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245074] NODE_VERBOSE=false (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245075] NPM_CONFIG_LOGLEVEL=error (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245077] NPM_CONFIG_PRODUCTION=true (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245078] -----> Building dependencies (STDOUT, STG)#
+
+#2.0#2023 09 22 07:50:53.200#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18349###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:52.245079] Installing node modules (package.json) (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:58.578741] added 74 packages, and audited 75 packages in 6s (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:58.578874] 6 packages are looking for funding (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:58.578886] run `npm fund` for details (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:58.579778] found 0 vulnerabilities (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:58.580294] npm notice (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:58.580309] npm notice New major version of npm available! 9.7.2 -> 10.1.0 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:58.580322] npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.1.0> (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:58.580324] npm notice Run `npm install -g npm@10.1.0` to update! (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:50:58.580393] npm notice (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.319#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:01.702021] [31;1m**WARNING**[0m Unmet dependencies don't fail npm install but may cause runtime issues (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.320#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:01.702033] See: https://github.com/npm/npm/issues/7494 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.320#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:01.767467] Contrast Security no credentials found. Will not write environment files. (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.320#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:01.767587] inside Sealights hook (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:04.320#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15547###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:01.767710] service is not configured to run with Sealights (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:43.413#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18484###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:34.820146] Exit status 0 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:43.413#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18484###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:34.820180] Uploading droplet, build artifacts cache... (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:43.413#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18484###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:34.820220] Uploading droplet... (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:43.413#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18484###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:34.820252] Uploading build artifacts cache... (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:43.413#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18484###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:37.071741] Creating droplet for app with guid 5b140137-b616-44a1-a3ce-5034f7e13011 (STDOUT, API)#
+
+#2.0#2023 09 22 07:51:43.413#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18484###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:40.285945] Uploaded build artifacts cache (555.2M) (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:53.500#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18526###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:45.669610] Uploaded droplet (270.8M) (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:53.500#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18526###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:45.699640] Uploading complete (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:53.500#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18526###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:45.900393] Cell 7b8b35bc-9859-4a8a-86aa-886d9bd3a3ab stopping instance c0f1a964-34b1-4c12-b70e-7e6f9e16d433 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:53.500#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18526###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:45.900429] Cell 7b8b35bc-9859-4a8a-86aa-886d9bd3a3ab destroying container for instance c0f1a964-34b1-4c12-b70e-7e6f9e16d433 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:51:53.500#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18526###
+[PollStageAppStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:48.563097] Cell 7b8b35bc-9859-4a8a-86aa-886d9bd3a3ab successfully destroyed container for instance c0f1a964-34b1-4c12-b70e-7e6f9e16d433 (STDOUT, STG)#
+
+#2.0#2023 09 22 07:52:03.568#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15629###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:53.582001] Updated app with guid 5b140137-b616-44a1-a3ce-5034f7e13011 ({:droplet_guid=>"dd26b719-9207-4aba-b32f-a4a3c4788d3f"}) (STDOUT, API)#
+
+#2.0#2023 09 22 07:52:03.568#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15629###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:54.064547] Cell 6ed61087-9411-4294-b4e3-75509108329a creating container for instance 0b55f431-f428-4d26-b460-f82938dbaa2f (STDOUT, CELL)#
+
+#2.0#2023 09 22 07:52:03.568#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15629###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:54.410820] Security group rules were updated (STDOUT, CELL)#
+
+#2.0#2023 09 22 07:52:03.568#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-15629###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:51:54.421394] Cell 6ed61087-9411-4294-b4e3-75509108329a successfully created container for instance 0b55f431-f428-4d26-b460-f82938dbaa2f (STDOUT, CELL)#
+
+#2.0#2023 09 22 07:52:13.634#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9825###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:52:04.695012] [cds-dbm] - starting delta database deployment of service db (STDOUT, APP/TASK/deploy_to_postgresql)#
+
+#2.0#2023 09 22 07:54:54.472#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-16118###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:54:50.006603] [cds-dbm] - delta successfully deployed to the database (STDOUT, APP/TASK/deploy_to_postgresql)#
+
+#2.0#2023 09 22 07:55:14.503#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18888###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:55:07.910861] npm notice (STDERR, APP/TASK/deploy_to_postgresql)#
+
+#2.0#2023 09 22 07:55:14.503#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18888###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:55:07.910968] npm notice New major version of npm available! 9.7.2 -> 10.1.0 (STDERR, APP/TASK/deploy_to_postgresql)#
+
+#2.0#2023 09 22 07:55:14.503#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18888###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:55:07.911034] npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.1.0> (STDERR, APP/TASK/deploy_to_postgresql)#
+
+#2.0#2023 09 22 07:55:14.503#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18888###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:55:07.911058] npm notice Run `npm install -g npm@10.1.0` to update! (STDERR, APP/TASK/deploy_to_postgresql)#
+
+#2.0#2023 09 22 07:55:14.503#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18888###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:55:07.911137] npm notice (STDERR, APP/TASK/deploy_to_postgresql)#
+
+#2.0#2023 09 22 07:55:14.503#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18888###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:55:07.919339] Exit status 0 (STDOUT, APP/TASK/deploy_to_postgresql)#
+
+#2.0#2023 09 22 07:55:14.503#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18888###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:55:08.211357] Cell 6ed61087-9411-4294-b4e3-75509108329a stopping instance 0b55f431-f428-4d26-b460-f82938dbaa2f (STDOUT, CELL)#
+
+#2.0#2023 09 22 07:55:14.503#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18888###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:55:08.211403] Cell 6ed61087-9411-4294-b4e3-75509108329a destroying container for instance 0b55f431-f428-4d26-b460-f82938dbaa2f (STDOUT, CELL)#
+
+#2.0#2023 09 22 07:55:14.503#Z#DEBUG#com.sap.cloud.lm.sl.xs2.7dfe2ccc-591c-11ee-8710-eeee0a934cfb.btp-procurement-data-extractor-pgdb-deployer.executeTaskTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-18888###
+[PollExecuteTaskStatusExecution] [btp-procurement-data-extractor-pgdb-deployer] 5b140137-b616-44a1-a3ce-5034f7e13011 [2023-09-22T07:55:09.287409] Cell 6ed61087-9411-4294-b4e3-75509108329a successfully destroyed container for instance 0b55f431-f428-4d26-b460-f82938dbaa2f (STDOUT, CELL)#
+

@@ -241,6 +241,10 @@ service workzone @(path:'/workzone')    {
     entity AdvancePayments as projection on entities.AdvancePayments;
 
 
+
+     @readonly
+    entity CountryRiskScores as projection on entities.CountryRiskScores;
+
     /** Supplier Management Stories */
     @readonly
     entity SupplierRegistrationProjects as projection on entities.SupplierRegistrationProjects;
