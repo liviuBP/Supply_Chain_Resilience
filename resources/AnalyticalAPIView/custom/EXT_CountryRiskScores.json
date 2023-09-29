@@ -1,0 +1,13 @@
+{
+    "status": "published",
+    "documentType": "CountryRiskScores",
+    "selectAttributes": [
+        "CountryId",
+        "Region",
+        "Subregion",
+        "PoliticalStabilityScore",
+        "AntiBriberyAntiCorruption",
+        "NaturalDisasterScore",
+        "SustainabilityScore"
+    ]
+}

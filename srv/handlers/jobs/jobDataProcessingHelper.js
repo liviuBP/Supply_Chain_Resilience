@@ -93,7 +93,9 @@ const contractWorkspaceOSHandler = require('../contracts/contractWorkspaceOSHand
 const auditEntryHandler = require('../sourcing/auditEntryHandler');
 
 //our function
-const countryRiskHandler = require('../custom_handler/CountryRiskScores');
+const countryRiskHandler = require('../custom_handler/CountryRiskScoresHandler');
+//internal modules
+const readCSVFile = require('../../utils/ReadDataFromCSVFile');
 
 
 async function ProcessData(viewTemplateName,Records,realm){
@@ -103,8 +105,9 @@ async function ProcessData(viewTemplateName,Records,realm){
             
             
             let affectedRows;
-            affectedRows = await countryRiskHandler.insertData(Records, realm);
-            affectedRows = [];
+            // affectedRows = await countryRiskHandler.insertData(Records, realm);
+            // affectedRows = [];
+            
             switch(viewTemplateName){
                 //Analytical API
                 case "EXT_InvoiceLineItemSA":
@@ -327,9 +330,15 @@ async function ProcessData(viewTemplateName,Records,realm){
                     break;
                 case "EXT_OP_Contract":
                     affectedRows = await contractsOSHandler.insertData(Records, realm);
+                   affectedRows = await contractsOSHandler.insertData(Records, realm);
                     break;
-                
-
+                // our code
+                case "EXT_CountryRiskScores":
+                    // get data from CSV file
+                     let aCSVRecords = readCSVFile.getDataFromCSVFile();
+                    
+                    //insert data from csv file to database table
+                    affectedRows = await countryRiskHandler.insertData(aCSVRecords, realm);
                 default:
                     logger.warn(`No handler for template ${viewTemplateName} data processing skipped.`);
             }

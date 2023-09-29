@@ -74,7 +74,7 @@ using from './invoices/OneTimeVendors';
 using from './invoices/Invoices';
 
 //custom table
-using from './custom_tabels/CountryRiskScores';
+using from './custom_tables/CountryRiskScores';
 
 //suppliers
 using from './suppliers/Suppliers';
