@@ -5,10 +5,20 @@ using sap.ariba as entities from '../db';
 @(requires: ['authenticated-user', 'identified-user', 'system-user'])
 service workzone @(path:'/workzone')    {
 
+    //custom tables
+    @readonly
+    entity CountryRiskScores as projection on entities.CountryRiskScores;
+
+    @readonly
+    entity CommodityRiskScores as projection on entities.CommodityRiskScores;
+
+
 
     /**master data */
     @readonly
     entity CommodityCode as projection on entities.CommodityCode;
+
+     
 
     /** Contracts */
     @readonly
@@ -242,8 +252,7 @@ service workzone @(path:'/workzone')    {
 
 
 
-     @readonly
-    entity CountryRiskScores as projection on entities.CountryRiskScores;
+    
 
     /** Supplier Management Stories */
     @readonly

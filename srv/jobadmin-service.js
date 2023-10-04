@@ -8,6 +8,7 @@ module.exports = cds.service.impl((srv) => {
 
     //Job management
     srv.on('createJob', jobsHandler.createJob);
+    srv.on('createCustomJob', jobsHandler.createCustomJob);
     srv.on('UpdateJobStatus', jobsHandler.UpdateJobStatus);
     srv.on('ProcessFinishedJobs', jobsHandler.ProcessFinishedJobs);
 

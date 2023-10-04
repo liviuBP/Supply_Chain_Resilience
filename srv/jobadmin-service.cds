@@ -9,6 +9,7 @@ service JobAdminService @(path:'/jobadmin')    {
 
     type filter { updatedDateFrom: DateTime; updatedDateTo: DateTime };
     action createJob (realm: entities.Jobs:Realm, viewTemplateName: String, loadMode: String,apiType: String, filterCriteria: filter) returns String;
+    action createCustomJob (realm: entities.Jobs:Realm, viewTemplateName: String, loadMode: String, apiType: String, filterCriteria: filter) returns String;
     action UpdateJobStatus (realm: entities.Jobs:Realm) returns String;
     action ProcessFinishedJobs (realm: entities.Jobs:Realm) returns String;
 

@@ -92,23 +92,24 @@ const contractWorkspaceOSHandler = require('../contracts/contractWorkspaceOSHand
 
 const auditEntryHandler = require('../sourcing/auditEntryHandler');
 
-//our function
-const countryRiskHandler = require('../custom_handler/CountryRiskScoresHandler');
-//internal modules
-const readCSVFile = require('../../utils/ReadDataFromCSVFile');
 
-
-async function ProcessData(viewTemplateName,Records,realm){
+async function ProcessData(viewTemplateName, Records, realm) {
     //Routes the extracted data to the appropriate processing handler
-    return new Promise(async (resolve,reject)=>{
-        try{
-            
-            
+    return new Promise(async (resolve, reject) => {
+        try {
+
+
             let affectedRows;
-            // affectedRows = await countryRiskHandler.insertData(Records, realm);
-            // affectedRows = [];
-            
-            switch(viewTemplateName){
+            logger.info("executing helper", viewTemplateName);
+                   // get data from CSV file
+                  // let aCSVRecords = readCSVFile.getDataFromCSVFile();
+                   //insert data from csv file to database table
+                   //let RiskRows = await countryRiskHandler.insertData(aCSVRecords, realm);             
+
+
+          //  affectedRows = await countryRiskHandler.insertData(Records, realm);
+          // affectedRows = [];
+            switch (viewTemplateName) {
                 //Analytical API
                 case "EXT_InvoiceLineItemSA":
                     affectedRows = await invoiceLineItemsSAHandler.insertData(Records, realm)
@@ -118,7 +119,7 @@ async function ProcessData(viewTemplateName,Records,realm){
                     break;
                 case "EXT_InvoiceException":
                     affectedRows = await invoiceExceptionsFactHandler.insertData(Records, realm)
-                    break; 
+                    break;
                 case "EXT_RejectedInvoice":
                     affectedRows = await rejectedInvoicesFactHandler.insertData(Records, realm)
                     break;
@@ -142,10 +143,10 @@ async function ProcessData(viewTemplateName,Records,realm){
                     break;
                 case "EXT_AdvancePayment":
                     affectedRows = await advancePaymentFactHanlder.insertData(Records, realm)
-                    break;   
+                    break;
                 case "EXT_Payment":
                     affectedRows = await paymentsFactHandler.insertData(Records, realm)
-                    break;                                       
+                    break;
                 case "EXT_RequisitionLineItem":
                     affectedRows = await requisitionLineItemsFactHandler.insertData(Records, realm)
                     break;
@@ -164,7 +165,7 @@ async function ProcessData(viewTemplateName,Records,realm){
                 case "EXT_ContractWorkspace":
                     affectedRows = await contractWorkspacesFactHandler.insertData(Records, realm)
                     break;
-                 case "EXT_SourcingProject":
+                case "EXT_SourcingProject":
                     affectedRows = await sourcingProjectsFactHandler.insertData(Records, realm)
                     break;
                 case "EXT_SupplierParticipation":
@@ -300,28 +301,28 @@ async function ProcessData(viewTemplateName,Records,realm){
                     break;
                 case "EXT_OS_Alternative":
                     affectedRows = await rfxAlternativeHandler.insertData(Records, realm);
-                    break;                  
+                    break;
                 case "EXT_OS_Task":
                     affectedRows = await taskHandler.insertData(Records, realm);
-                    break;       
+                    break;
                 case "EXT_OS_ItemSupplierData":
                     affectedRows = await itemSupplierDataHandler.insertData(Records, realm);
-                    break;             
+                    break;
                 case "EXT_OS_Scenario":
                     affectedRows = await scenarioHandler.insertData(Records, realm);
-                    break;                
+                    break;
                 case "EXT_OS_SourcingRequest":
                     affectedRows = await sourcingRequestOSHandler.insertData(Records, realm);
-                    break;                
+                    break;
                 case "EXT_OS_SourcingProject":
                     affectedRows = await sourcingProjectOSHandler.insertData(Records, realm);
-                    break;                
+                    break;
                 case "EXT_OS_DocumentTask":
                     affectedRows = await documentTaskHandler.insertData(Records, realm);
-                    break;                 
+                    break;
                 case "EXT_OS_Organization":
                     affectedRows = await organizationHandler.insertData(Records, realm);
-                    break;    
+                    break;
                 case "EXT_OS_ContractWorkspace":
                     affectedRows = await contractWorkspaceOSHandler.insertData(Records, realm);
                     break;
@@ -330,27 +331,19 @@ async function ProcessData(viewTemplateName,Records,realm){
                     break;
                 case "EXT_OP_Contract":
                     affectedRows = await contractsOSHandler.insertData(Records, realm);
-                   affectedRows = await contractsOSHandler.insertData(Records, realm);
                     break;
-                // our code
-                case "EXT_CountryRiskScores":
-                    // get data from CSV file
-                     let aCSVRecords = readCSVFile.getDataFromCSVFile();
-                    
-                    //insert data from csv file to database table
-                    affectedRows = await countryRiskHandler.insertData(aCSVRecords, realm);
                 default:
                     logger.warn(`No handler for template ${viewTemplateName} data processing skipped.`);
             }
             resolve(affectedRows);
 
-        } catch(e) {
+        } catch (e) {
             logger.error(`Error while processing data for ${viewTemplateName} for realm: ${realm} details: ${e}`);
             reject(e);
         }
     })
 };
-
+//ProcessData("EXT_CountryRiskScores",[],"");
 module.exports = {
     ProcessData
 };

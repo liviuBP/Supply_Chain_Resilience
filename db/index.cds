@@ -73,8 +73,10 @@ using from './invoices/PrereconciledInvoices';
 using from './invoices/OneTimeVendors';
 using from './invoices/Invoices';
 
-//custom table
+//custom tables
 using from './custom_tables/CountryRiskScores';
+using from './custom_tables/CommodityRiskScores';
+
 
 //suppliers
 using from './suppliers/Suppliers';
