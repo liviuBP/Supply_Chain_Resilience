@@ -16,6 +16,7 @@ const utils = require('../../utils/Utils');
 const jobDataProcessingHelper = require('./jobDataProcessingHelper');
 const countryRiskHandler = require('../custom_handler/CountryRiskScoresHandler');
 const CommodityRiskHandler = require('../custom_handler/CommodityRiskScoresHandler');
+const SupplierActivityRiskHandler = require('../custom_handler/SupplierActivityRisk.js');
 // //Don't seem to be used anymore
 // const { resolve } = require("@sap/cds");
 // const { log } = require("console");
@@ -37,6 +38,13 @@ async function createCustomJob(context, next) {
             await CommodityRiskHandler.insertData(realm);
             logger.info("CommodityRiskScores processed, no additional job rquest");
             break;
+        case "EXT_CommodityRiskScores":
+            logger.info(`Processing  ${viewTemplateName}`);
+            await CommodityRiskHandler.insertData(realm);
+            logger.info("CommodityRiskScores processed, no additional job rquest");
+            break;
+        
+            //case EXT_ProcessAll to ru nthe entire workflow
       //  default:
     }     
     return 'OK';

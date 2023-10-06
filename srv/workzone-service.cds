@@ -12,6 +12,9 @@ service workzone @(path:'/workzone')    {
     @readonly
     entity CommodityRiskScores as projection on entities.CommodityRiskScores;
 
+    @readonly
+    entity SupplierActivityRisk as projection on entities.SupplierActivityRisk;
+
 
 
     /**master data */
