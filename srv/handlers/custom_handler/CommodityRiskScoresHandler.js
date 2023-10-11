@@ -35,7 +35,7 @@ function insertData(realm) {
             // // Now, excelData contains the data from the Excel file
  
             for (var index in aData) {
-                aData[index].Realm = realm;
+                
                // logger.info(aData[index])
                 await srv.run(INSERT.into("sap.ariba.CommodityRiskScores").entries(aData[index]));
                 //logger.info("Insert executed for line  " + aData[index].Realm + " country id " + aData[index].CountryId);

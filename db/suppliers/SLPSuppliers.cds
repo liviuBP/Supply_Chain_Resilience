@@ -73,7 +73,7 @@ entity SLPSuppliers_Qualifications: cuid {
     QualificationStatus     : String(100);
     PreferredStatus         : String(100);
     Category                : String(255);
-    Region                  : String(255);
+    Region                  : String(255); 
     BusinessUnit            : String(255);
     MaterialId              : String(255);
     ProcessType             : String(255);

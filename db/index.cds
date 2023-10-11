@@ -76,6 +76,7 @@ using from './invoices/Invoices';
 //custom tables
 using from './custom_tables/CountryRiskScores';
 using from './custom_tables/CommodityRiskScores';
+using from './custom_tables/ActivityRisk';
 
 
 //suppliers

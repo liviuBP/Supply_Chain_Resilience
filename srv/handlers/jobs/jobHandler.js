@@ -38,10 +38,10 @@ async function createCustomJob(context, next) {
             await CommodityRiskHandler.insertData(realm);
             logger.info("CommodityRiskScores processed, no additional job rquest");
             break;
-        case "EXT_CommodityRiskScores":
+        case "EXT_ActivityRisk":
             logger.info(`Processing  ${viewTemplateName}`);
-            await CommodityRiskHandler.insertData(realm);
-            logger.info("CommodityRiskScores processed, no additional job rquest");
+            await SupplierActivityRiskHandler.insertData(realm);
+            logger.info("SupplierActivityRisk processed, no additional job rquest");
             break;
         
             //case EXT_ProcessAll to ru nthe entire workflow

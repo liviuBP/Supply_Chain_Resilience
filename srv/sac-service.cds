@@ -11,7 +11,7 @@ service sac @(path:'/sac')    {
     //Custom tables
 
     @readonly
-    entity SupplierActivityRisk as projection on entities.SupplierActivityRisk;
+    entity ActivityRisk as projection on entities.ActivityRisk;
 
     @readonly
     entity CountryRiskScores as projection on entities.CountryRiskScores;

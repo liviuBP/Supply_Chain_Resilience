@@ -27,7 +27,6 @@ function insertData(realm) {
  
             for (var index in aData) {
                 //sa se adauge cod pentru mapare intre excel si baza de date in caz ca nu se respecta templateul
-                aData[index].Realm = realm;
                // logger.info(aData[index])/
                 await srv.run(INSERT.into("sap.ariba.CountryRiskScores").entries(aData[index]));
                 //logger.info("Insert executed for line  " + aData[index].Realm + " country id " + aData[index].CountryId);
