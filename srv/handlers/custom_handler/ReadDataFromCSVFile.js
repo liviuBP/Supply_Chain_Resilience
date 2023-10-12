@@ -22,7 +22,7 @@ function getDataFromCSVFile(CSVfile) {
     const logger = cds.log('logger');
     for (var index in aExcelData) {      
         //logger.info(aExcelData[index].CountryId,aExcelData[index].Region,aExcelData[index].Subregion);
-        logger.info(aExcelData[index].CommodityName);
+        //logger.info(aExcelData[index].CommodityName);
     }
  
     return aExcelData;

@@ -10,7 +10,7 @@ entity CommodityRiskScores: managed  {
     //    ParentType                      : String(255);
     key CommodityCode                     : String(255);
     key CommodityName                     : String(255);
-        AntiBriberyAntiCorruption         : Double;
+        AntiBriberyAntiCorruption         : String(255);
         SustainablilityScore              : String(255);
         
         

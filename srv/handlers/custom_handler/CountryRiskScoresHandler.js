@@ -7,12 +7,12 @@ const readCSVFile = require('../custom_handler/ReadDataFromCSVFile');
 // delete all data, then upload from csv, call function from job (check jobHandler.js for example)
 function insertData(realm) {
  
-    let aData = readCSVFile.getDataFromCSVFile("CountryRiskScores.xlsx"); 
-
-
-   
+    var aData = readCSVFile.getDataFromCSVFile("CountryRiskScores.xlsx"); 
+    
+    
+    
     return new Promise(async function (resolve, reject) {
-        //logger.info(aData);
+        
         const srv = cds.transaction(aData);
  
         if (!aData || aData.length === 0) {
@@ -21,13 +21,15 @@ function insertData(realm) {
         }
  
         try {
- 
-            srv.run(DELETE.from('sap.ariba.CountryRiskScores'))
-            // // Now, excelData contains the data from the Excel file
+
+            srv.run(DELETE.from("sap.ariba.CountryRiskScores"))
+            
+
+            await srv.commit();
  
             for (var index in aData) {
-                //sa se adauge cod pentru mapare intre excel si baza de date in caz ca nu se respecta templateul
-               // logger.info(aData[index])/
+                
+               //logger.info(aData[index])
                 await srv.run(INSERT.into("sap.ariba.CountryRiskScores").entries(aData[index]));
                 //logger.info("Insert executed for line  " + aData[index].Realm + " country id " + aData[index].CountryId);
             }
@@ -35,20 +37,20 @@ function insertData(realm) {
             await srv.commit();
             resolve(aData.length);
 
-            //let res = await srv.run(SELECT.from("sap.ariba.CountryRiskScores").where(
-             //   {
-             //       Realm: aData[1].Realm,
-              //      CountryId: aData[1].CountryId
-           //     })
-           // );
+        //     let res = await srv.run(SELECT.from("sap.ariba.CountryRiskScores").where(
+        //        {
+        //            CountryId: { "!=": null }
+                  
+        //        })
+        //    );
  
-            //logger.info("Record found: " + res);
+            // logger.info("Records found: " + res);
  
-            //return 'Finished all';
+            
  
         }
         catch (e) {
-            logger.info(e);
+            //logger.info(e);
             logger.error('Error while procesing');
             await srv.rollback();
  

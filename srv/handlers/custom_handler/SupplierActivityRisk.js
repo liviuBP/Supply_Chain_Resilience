@@ -23,6 +23,9 @@ function insertData(realm) {
 
         }));
         logger.info(aQualifications);
+        for(var index in aQualifications){
+            logger.info(aQualifications[index])
+        }
 
         let aCountry = await srv.run(SELECT.from("sap.ariba.CountryRiskScores"));
         logger.info(aCountry);
@@ -48,50 +51,53 @@ function insertData(realm) {
 
         try {
 
-            //srv.run(DELETE.from('sap.ariba.ActivityRisk'))
+            srv.run(DELETE.from("sap.ariba.ActivityRisk"))
 
-            // for (var index in aQualifications) {
+            for (var index in aQualifications) {
                 
 
-            //     let oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0 }
-            //     // for(var indexCommodity in aCommodity){
-            //     //     if(aQualifications[index].Category == aCommodity[indexCommodity].CommodityCode){
-            //     //         var oCommodityResult = aCommodity[indexCommodity];
-            //     //     }
-            //     // }
-            //     // for(var indexCountry in aCountry){
-            //     //     if(aQualifications[index].Region == aCountry[indexCountry].CountryId){
-            //     //         var oCountryResult = aCountry[indexCountry];
-            //     //     }
-            //     // }
-            //     const oCommodityResult = aCommodity.filter((oCommo) => { return oCommo.CommodityCode == aQualifications[index].Category });
+                let oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0 }
+                // for(var indexCommodity in aCommodity){
+                //     if(aQualifications[index].Category == aCommodity[indexCommodity].CommodityCode){
+                //         var oCommodityResult = aCommodity[indexCommodity];
+                //     }
+                // }
+                // for(var indexCountry in aCountry){
+                //     if(aQualifications[index].Region == aCountry[indexCountry].CountryId){
+                //         var oCountryResult = aCountry[indexCountry];
+                //     }
+                // }
+                const oCommodityResult = aCommodity.filter((oCommo) => { return oCommo.CommodityCode == aQualifications[index].Category });
 
-            //     const oCountryResult = aCountry.filter((oCountry) => { return oCountry.CountryId == aQualifications[index].Region });
-            //     logger.info(oCountryResult);
-            //     if (oCommodityResult.length > 0 && oCountryResult.length > 0) {
+                const oCountryResult = aCountry.filter((oCountry) => { return oCountry.CountryId == aQualifications[index].Region });
+                logger.info(oCountryResult);
+                if (oCommodityResult.length > 0 && oCountryResult.length > 0) {
 
-            //         oEntriesActivity.SupplierId = aQualifications[index].SupplierId;
-            //         oEntriesActivity.CommodityId = oCommodityResult[0].CommodityCode;
-            //         oEntriesActivity.CountryId = oCountryResult[0].CountryId;
-            //         oEntriesActivity.AntiBriberyAntiCorruption = (oCommodityResult[0].AntiBriberyAntiCorruption + oCountryResult[0].AntiBriberyAntiCorruption) / 2;
-            //         logger.info(oEntriesActivity);
-            //         aEntires.push(oEntriesActivity);
-            //         logger.info(aEntires.length);
-            //     }
+                    oEntriesActivity.SupplierId = aQualifications[index].SupplierId;
+                    oEntriesActivity.CommodityId = oCommodityResult[0].CommodityCode;
+                    oEntriesActivity.CountryId = oCountryResult[0].CountryId;
+                    const convertedCommodity = parseFloat(oCommodityResult[0].AntiBriberyAntiCorruption);
+                    const convertedCountry = parseFloat(oCountryResult[0].AntiBriberyAntiCorruption);
+                    oEntriesActivity.AntiBriberyAntiCorruption = (convertedCommodity + convertedCountry) / 2;
+                    //oEntriesActivity.AntiBriberyAntiCorruption = 10.0;
+                    logger.info(oEntriesActivity);
+                    aEntires.push(oEntriesActivity);
+                    logger.info(aEntires.length);
+                }
 
 
 
-            // }
+            }
 
             //let a = [{ SupplierId: "201", CommodityId: '123', CountryId: "ro", AntiBriberyAntiCorruption: 12.0 }];
 
             //await srv.run(INSERT.into("sap.ariba.ActivityRisk").entries({ SupplierId: "212", CommodityId: '127', CountryId: "bg", AntiBriberyAntiCorruption: 12.0 }));
 
-            // await srv.run(INSERT.into("sap.ariba.ActivityRisk", aEntires));
+            await srv.run(INSERT.into("sap.ariba.ActivityRisk", aEntires));
             logger.info("Insert with success!")
 
 
-            // await srv.commit();
+            await srv.commit();
             resolve();
 
 
