@@ -6,7 +6,7 @@ using sap.ariba.type as types from '../types';
 
 entity CountryRiskScores: managed  {
 
-    key CountryName                           : String(255);
+    key CountryName                       : String(255);
     key CountryId                         : String(50);
 
         Region                            : String(255);

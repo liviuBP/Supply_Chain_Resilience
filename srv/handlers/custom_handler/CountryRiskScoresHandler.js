@@ -13,7 +13,7 @@ function insertData(realm) {
     
     return new Promise(async function (resolve, reject) {
         
-        const srv = cds.transaction(aData);
+         const srv = cds.transaction(aData);
  
         if (!aData || aData.length === 0) {
             resolve(0);
@@ -22,10 +22,10 @@ function insertData(realm) {
  
         try {
 
-            srv.run(DELETE.from("sap.ariba.CountryRiskScores"))
+             srv.run(DELETE.from("sap.ariba.CountryRiskScores"))
             
 
-            await srv.commit();
+             
  
             for (var index in aData) {
                 
@@ -35,22 +35,10 @@ function insertData(realm) {
             }
  
             await srv.commit();
-            resolve(aData.length);
-
-        //     let res = await srv.run(SELECT.from("sap.ariba.CountryRiskScores").where(
-        //        {
-        //            CountryId: { "!=": null }
-                  
-        //        })
-        //    );
- 
-            // logger.info("Records found: " + res);
- 
-            
- 
+            resolve(aData.length); 
         }
         catch (e) {
-            //logger.info(e);
+            logger.info(e);
             logger.error('Error while procesing');
             await srv.rollback();
  
@@ -61,7 +49,7 @@ function insertData(realm) {
     })
 }
 
- 
+insertData("Realm");
 module.exports = {
     insertData
 }

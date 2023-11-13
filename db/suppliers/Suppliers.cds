@@ -17,7 +17,7 @@ entity Suppliers: managed  {
 
         SupplierName                  : String(255);
         SupplierPublicName            : String(1000);
-        ShortDescription              : String(1000);
+        ShortDescription               : String(1000);
         Alias1                        : String(512);
         Alias2                        : String(512);
         LegalName                     : String(256);

@@ -30,6 +30,7 @@ async function createCustomJob(context, next) {
     switch (viewTemplateName) {
         case "EXT_CountryRiskScores":
             logger.info(`Processing  ${viewTemplateName}`);
+            logger.info("Merge deployul din nou????")
             await countryRiskHandler.insertData(realm);
             logger.info("CountryRiskScores processed, no additional job rquest");
             break;
@@ -43,8 +44,7 @@ async function createCustomJob(context, next) {
             await SupplierActivityRiskHandler.insertData(realm);
             logger.info("SupplierActivityRisk processed, no additional job rquest");
             break;
-        
-            //case EXT_ProcessAll to ru nthe entire workflow
+            //case EXT_ProcessAll to run the entire workflow
       //  default:
     }     
     return 'OK';

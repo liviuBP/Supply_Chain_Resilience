@@ -9,5 +9,7 @@ entity ActivityRisk: managed  {
     key CommodityId                       : String(255);
     key CountryId                         : String(255);
         AntiBriberyAntiCorruption         : Double;
+        SustainabilityScore               : Double;
+        NaturalDisasterScore              : Double;
         
 }

@@ -22,29 +22,16 @@ function insertData(realm) {
         try {
  
             srv.run(DELETE.from("sap.ariba.CommodityRiskScores"))
-            // // Now, excelData contains the data from the Excel file
  
             for (var index in aData) {
                 
-               // logger.info(aData[index])
-                await srv.run(INSERT.into("sap.ariba.CommodityRiskScores").entries(aData[index]));
+                // logger.info(aData[index])
+               await srv.run(INSERT.into("sap.ariba.CommodityRiskScores").entries(aData[index]));
                 //logger.info("Insert executed for line  " + aData[index].Realm + " country id " + aData[index].CountryId);
             }
  
-        await srv.commit();
-            resolve(aData.length);
-
-            //let res = await srv.run(SELECT.from("sap.ariba.CountryRiskScores").where(
-             //   {
-             //       Realm: aData[1].Realm,
-              //      CountryId: aData[1].CountryId
-           //     })
-           // );
- 
-            //logger.info("Record found: " + res);
- 
-            //return 'Finished all';
- 
+            await srv.commit();
+            resolve(aData.length); 
         }
         catch (e) {
             logger.info(e);
@@ -57,6 +44,7 @@ function insertData(realm) {
 
     })
 }
+
 
 module.exports = {
     insertData

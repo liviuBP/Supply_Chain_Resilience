@@ -3,11 +3,27 @@ const cds = require("@sap/cds");
 const logger = cds.log('logger');
 const readCSVFile = require('../custom_handler/ReadDataFromCSVFile');
 
+function removeDuplicatesFromArray(array) {
+    const seen = new Set();
+    return array.filter(obj => {
+        const stringifiedObj = JSON.stringify(obj);
+        if (!seen.has(stringifiedObj)) {
+            seen.add(stringifiedObj);
+            return true;
+        }
+        return false;
+    });
+}
+
 // Next step!
 // delete all data, then upload from csv, call function from job (check jobHandler.js for example)
 function insertData(realm) {
 
     var aEntires = [];
+    var oSupplierContract;
+    var countryResult;
+    var addressCountry;
+    
 
     return new Promise(async function (resolve, reject) {
 
@@ -15,71 +31,69 @@ function insertData(realm) {
         logger.info("Ajunge aici cu succes! ");
         const srv = cds.transaction(aEntires);
 
-
-        let aQualifications = await srv.run(SELECT.from("sap.ariba.SLPSuppliers_Qualifications").where({
-            SLPSupplier_Realm: realm,
-            //Category: { "!=": null },
-            //Region: { "!=": null }
-
-        }));
-        logger.info(aQualifications);
-        for(var index in aQualifications){
-            logger.info(aQualifications[index])
-        }
-
         let aCountry = await srv.run(SELECT.from("sap.ariba.CountryRiskScores"));
-        logger.info(aCountry);
+        
         let aCommodity = await srv.run(SELECT.from("sap.ariba.CommodityRiskScores"));
-        logger.info(aCommodity);
 
-        // var aQualifications = [{ SupplierId: "201", Category: '123', Region: "ro" },
-        // { SupplierId: "212", Category: '127', Region: "bg" },
-        // { SupplierId: "125", Category: '125', Region: "tu" },
-        // { SupplierId: "456", Category: '342', Region: "ar" }];
+        let aContracts = await srv.run(SELECT.from("sap.ariba.ContractWorkspaces"));
 
+        let aSuppliersSLP = await srv.run(SELECT.from("sap.ariba.SLPSuppliers"));
+        
 
-
-        // var aCountry = [{ CountryId: "ro", AntiBriberyAntiCorruption: 20.0},
-        //                 { CountryId: "bg", AntiBriberyAntiCorruption: 20.0},
-        //                 { CountryId: "tu", AntiBriberyAntiCorruption: 20.0}]
-
-
-        // var aCommodity = [{ CommodityCode: "123", AntiBriberyAntiCorruption: 20.0},
-        //                 { CommodityCode: "124", AntiBriberyAntiCorruption: 20.0},
-        //                 { CommodityCode: "125", AntiBriberyAntiCorruption: 20.0}]
-
-
+        let aContractCommodities = await srv.run(SELECT.from("sap.ariba.ContractWorkspaces_Commodity"));
+        
+        
+        
+        
         try {
 
             srv.run(DELETE.from("sap.ariba.ActivityRisk"))
+            await srv.commit();
+            
 
-            for (var index in aQualifications) {
+            for (var index in aContracts) {
                 
 
-                let oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0 }
-                // for(var indexCommodity in aCommodity){
-                //     if(aQualifications[index].Category == aCommodity[indexCommodity].CommodityCode){
-                //         var oCommodityResult = aCommodity[indexCommodity];
-                //     }
-                // }
-                // for(var indexCountry in aCountry){
-                //     if(aQualifications[index].Region == aCountry[indexCountry].CountryId){
-                //         var oCountryResult = aCountry[indexCountry];
-                //     }
-                // }
-                const oCommodityResult = aCommodity.filter((oCommo) => { return oCommo.CommodityCode == aQualifications[index].Category });
+                let oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0,
+                                         SustainabilityScore:0, NaturalDisasterScore:0 }
 
-                const oCountryResult = aCountry.filter((oCountry) => { return oCountry.CountryId == aQualifications[index].Region });
-                logger.info(oCountryResult);
+                const oCommodityContract = aContractCommodities.filter((oCommo) => { return oCommo.ContractWorkspace_ProjectId == aContracts[index].ProjectId });
+
+                 
+                for(var indexSLP in aSuppliersSLP){
+                    if(aSuppliersSLP[indexSLP].SupplierId == aContracts[index].Supplier_SupplierId){
+                        oSupplierContract = aSuppliersSLP[indexSLP];
+                            addressCountry=aSuppliersSLP[indexSLP].AddressCountryCode;
+                        
+                        
+                        break;
+                    }
+                }
+                
+               const oCommodityResult = aCommodity.filter((oCommo) => { return oCommo.CommodityCode == oCommodityContract[0].Commodity_CommodityId });
+                
+               const oCountryResult = aCountry.filter((oCommo) => { return oCommo.CountryId == addressCountry });
+
                 if (oCommodityResult.length > 0 && oCountryResult.length > 0) {
 
-                    oEntriesActivity.SupplierId = aQualifications[index].SupplierId;
+                    oEntriesActivity.SupplierId = aContracts[index].Supplier_SupplierId;
                     oEntriesActivity.CommodityId = oCommodityResult[0].CommodityCode;
                     oEntriesActivity.CountryId = oCountryResult[0].CountryId;
                     const convertedCommodity = parseFloat(oCommodityResult[0].AntiBriberyAntiCorruption);
                     const convertedCountry = parseFloat(oCountryResult[0].AntiBriberyAntiCorruption);
                     oEntriesActivity.AntiBriberyAntiCorruption = (convertedCommodity + convertedCountry) / 2;
-                    //oEntriesActivity.AntiBriberyAntiCorruption = 10.0;
+
+                    //sustainability score  
+                    const convertedSustainAbilityCountry = parseFloat(oCountryResult[0].SustainabilityScore);
+                    const convertedSustainAbilityCommodity = parseFloat(oCountryResult[0].SustainabilityScore);
+
+                    //natural disaster score
+                    const convertedDisasterScore = parseFloat(oCountryResult[0].NaturalDisasterScore);
+
+                    oEntriesActivity.NaturalDisasterScore=convertedDisasterScore;
+                    oEntriesActivity.SustainabilityScore = (convertedSustainAbilityCountry + convertedSustainAbilityCommodity) / 2;
+
+
                     logger.info(oEntriesActivity);
                     aEntires.push(oEntriesActivity);
                     logger.info(aEntires.length);
@@ -89,11 +103,12 @@ function insertData(realm) {
 
             }
 
-            //let a = [{ SupplierId: "201", CommodityId: '123', CountryId: "ro", AntiBriberyAntiCorruption: 12.0 }];
+           
+            
+            const uniqueArray = removeDuplicatesFromArray(aEntires);
+            console.log(uniqueArray);
 
-            //await srv.run(INSERT.into("sap.ariba.ActivityRisk").entries({ SupplierId: "212", CommodityId: '127', CountryId: "bg", AntiBriberyAntiCorruption: 12.0 }));
-
-            await srv.run(INSERT.into("sap.ariba.ActivityRisk", aEntires));
+            await srv.run(INSERT.into("sap.ariba.ActivityRisk", uniqueArray));
             logger.info("Insert with success!")
 
 
