@@ -49,7 +49,7 @@ function insertData(realm) {
     })
 }
 
-insertData("Realm");
+
 module.exports = {
     insertData
 }

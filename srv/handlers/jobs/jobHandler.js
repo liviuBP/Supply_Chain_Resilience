@@ -17,6 +17,8 @@ const jobDataProcessingHelper = require('./jobDataProcessingHelper');
 const countryRiskHandler = require('../custom_handler/CountryRiskScoresHandler');
 const CommodityRiskHandler = require('../custom_handler/CommodityRiskScoresHandler');
 const SupplierActivityRiskHandler = require('../custom_handler/SupplierActivityRisk.js');
+const SupplierProfile = require('../custom_handler/SupplierProfile.js');
+
 // //Don't seem to be used anymore
 // const { resolve } = require("@sap/cds");
 // const { log } = require("console");
@@ -30,19 +32,23 @@ async function createCustomJob(context, next) {
     switch (viewTemplateName) {
         case "EXT_CountryRiskScores":
             logger.info(`Processing  ${viewTemplateName}`);
-            logger.info("Merge deployul din nou????")
             await countryRiskHandler.insertData(realm);
-            logger.info("CountryRiskScores processed, no additional job rquest");
+            logger.info("CountryRiskScores processed, no additional job request");
             break;
         case "EXT_CommodityRiskScores":
             logger.info(`Processing  ${viewTemplateName}`);
             await CommodityRiskHandler.insertData(realm);
-            logger.info("CommodityRiskScores processed, no additional job rquest");
+            logger.info("CommodityRiskScores processed, no additional job request");
             break;
         case "EXT_ActivityRisk":
             logger.info(`Processing  ${viewTemplateName}`);
             await SupplierActivityRiskHandler.insertData(realm);
-            logger.info("SupplierActivityRisk processed, no additional job rquest");
+            logger.info("SupplierActivityRisk processed, no additional job request");
+            break;
+        case "EXT_SupplierProfile":
+            logger.info(`Processing  ${viewTemplateName}`);
+            await SupplierProfile.insertData(realm);
+            logger.info("SupplierProfile processed, no additional job request");
             break;
             //case EXT_ProcessAll to run the entire workflow
       //  default:

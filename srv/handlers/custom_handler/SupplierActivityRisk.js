@@ -1,7 +1,7 @@
 "use strict";
 const cds = require("@sap/cds");
 const logger = cds.log('logger');
-const readCSVFile = require('../custom_handler/ReadDataFromCSVFile');
+
 
 function removeDuplicatesFromArray(array) {
     const seen = new Set();
@@ -15,13 +15,11 @@ function removeDuplicatesFromArray(array) {
     });
 }
 
-// Next step!
-// delete all data, then upload from csv, call function from job (check jobHandler.js for example)
+
 function insertData(realm) {
 
     var aEntires = [];
     var oSupplierContract;
-    var countryResult;
     var addressCountry;
     
 
@@ -50,12 +48,20 @@ function insertData(realm) {
             srv.run(DELETE.from("sap.ariba.ActivityRisk"))
             await srv.commit();
             
+            
 
             for (var index in aContracts) {
                 
 
-                let oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0,
-                                         SustainabilityScore:0, NaturalDisasterScore:0 }
+                var oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0,
+                                         SustainabilityScore:0, NaturalDisasterScore:0, SustainabilityEnvironmental:0,
+                                         SustanabilityHumanRights:0, E01_ClimateChange:0, ESG02_Pollution:0, E03_WaterResources:0,
+                                         ESG04_Biodiversity:0, ESG05_ResourcesAndCircularEconomy:0, ESG01_ChildLaborScore:0,
+                                         ESG02_FundamentalLaborRights:0, ESG03_UnequalTreatmentScore:0, ESG05_NaturalLivelihoodScore:0,
+                                         ESG06_SecurityForceScore:0, ESG07_ForceLaborScore:0, ESG08_FreedomOfAssociationScore:0,
+                                         ESG09_ViolationOfReasonableWagesScore:0, ESG10_IllegalViolationOfLandScore:0,
+                                         PoliticalStabilityScore:0}
+                                         
 
                 const oCommodityContract = aContractCommodities.filter((oCommo) => { return oCommo.ContractWorkspace_ProjectId == aContracts[index].ProjectId });
 
@@ -93,11 +99,81 @@ function insertData(realm) {
                     oEntriesActivity.NaturalDisasterScore=convertedDisasterScore;
                     oEntriesActivity.SustainabilityScore = (convertedSustainAbilityCountry + convertedSustainAbilityCommodity) / 2;
 
+                    //SustainabilityEnvironmental
+                    const convertedEnvironmental = parseFloat(oCountryResult[0].SustainabilityEnvironmental);
 
-                    logger.info(oEntriesActivity);
+                    oEntriesActivity.SustainabilityEnvironmental = (convertedEnvironmental + convertedSustainAbilityCommodity) / 2;
+
+                    //SustainabilityHumanRights
+                    const convertedHumanRights = parseFloat(oCountryResult[0].SustanabilityHumanRights);
+                    oEntriesActivity.SustanabilityHumanRights = (convertedHumanRights + convertedSustainAbilityCommodity) / 2;
+
+                    //E01Climate
+                    const convertedClimate = parseFloat(oCountryResult[0].E01_ClimateChange);
+                    oEntriesActivity.E01_ClimateChange = (convertedClimate + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG02
+                    const convertedPolution = parseFloat(oCountryResult[0].ESG02_Pollution);
+                    oEntriesActivity.ESG02_Pollution = (convertedPolution + convertedSustainAbilityCommodity) / 2;
+
+                    //E03
+                    const convertedWater = parseFloat(oCountryResult[0].E03_WaterResources);
+                    oEntriesActivity.E03_WaterResources = (convertedWater + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG04
+                    const convertedBiodiversity = parseFloat(oCountryResult[0].ESG04_Biodiversity);
+                    oEntriesActivity.ESG04_Biodiversity = (convertedBiodiversity + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG05
+                    const convertedResources = parseFloat(oCountryResult[0].ESG05_ResourcesAndCircularEconomy);
+                    oEntriesActivity.ESG05_ResourcesAndCircularEconomy = (convertedResources + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG01
+                    const convertedChildLabor = parseFloat(oCountryResult[0].ESG01_ChildLaborScore);
+                    oEntriesActivity.ESG01_ChildLaborScore = (convertedChildLabor + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG02
+                    const convertedFundamentalLabor = parseFloat(oCountryResult[0].ESG02_FundamentalLaborRights);
+                    oEntriesActivity.ESG02_FundamentalLaborRights = (convertedFundamentalLabor + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG03
+                    const convertedUnequalTreatment = parseFloat(oCountryResult[0].ESG03_UnequalTreatmentScore);
+                    oEntriesActivity.ESG03_UnequalTreatmentScore = (convertedUnequalTreatment + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG05
+                    const convertedNaturalLivelihood = parseFloat(oCountryResult[0].ESG05_NaturalLivelihoodScore);
+                    oEntriesActivity.ESG05_NaturalLivelihoodScore = (convertedNaturalLivelihood + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG06
+                    const convertedSecurity = parseFloat(oCountryResult[0].ESG06_SecurityForceScore);
+                    oEntriesActivity.ESG06_SecurityForceScore = (convertedSecurity + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG07
+                    const convertedForceLabor = parseFloat(oCountryResult[0].ESG07_ForceLaborScore);
+                    oEntriesActivity.ESG07_ForceLaborScore = (convertedForceLabor + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG08
+                    const convertedFreedomAssociation = parseFloat(oCountryResult[0].ESG08_FreedomOfAssociationScore);
+                    oEntriesActivity.ESG08_FreedomOfAssociationScore = (convertedFreedomAssociation + convertedSustainAbilityCommodity) / 2;
+
+
+                    //ESG09
+                    const convertedViolationWages = parseFloat(oCountryResult[0].ESG09_ViolationOfReasonableWagesScore);
+                    oEntriesActivity.ESG09_ViolationOfReasonableWagesScore = (convertedViolationWages + convertedSustainAbilityCommodity) / 2;
+
+                    //ESG10
+                    const convertedIllegalLandscape = parseFloat(oCountryResult[0].ESG10_IllegalViolationOfLandScore);
+                    oEntriesActivity.ESG10_IllegalViolationOfLandScore = (convertedIllegalLandscape + convertedSustainAbilityCommodity) / 2;
+
+                    //PoliticalScore
+                    const convertedPolitical = parseFloat(oCountryResult[0].PoliticalStabilityScore);
+                    oEntriesActivity.PoliticalStabilityScore = convertedPolitical;
+
+                    
                     aEntires.push(oEntriesActivity);
                     logger.info(aEntires.length);
-                }
+                    
+               }
 
 
 
@@ -110,7 +186,7 @@ function insertData(realm) {
 
             await srv.run(INSERT.into("sap.ariba.ActivityRisk", uniqueArray));
             logger.info("Insert with success!")
-
+            
 
             await srv.commit();
             resolve();

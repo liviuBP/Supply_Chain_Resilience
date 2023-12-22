@@ -343,7 +343,7 @@ async function ProcessData(viewTemplateName, Records, realm) {
         }
     })
 };
-//ProcessData("EXT_CountryRiskScores",[],"");
+//ProcessData("EXT_CountryRiskScores",[],"")
 module.exports = {
     ProcessData
 };
