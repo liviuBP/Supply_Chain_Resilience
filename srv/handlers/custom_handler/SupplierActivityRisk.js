@@ -46,9 +46,9 @@ function insertData(realm) {
         try {
 
             srv.run(DELETE.from("sap.ariba.ActivityRisk"))
-            await srv.commit();
             
-            
+            logger.info("Aici te uiti dupa contracte")
+            logger.info(aContracts.length)
 
             for (var index in aContracts) {
                 
@@ -69,17 +69,26 @@ function insertData(realm) {
                 for(var indexSLP in aSuppliersSLP){
                     if(aSuppliersSLP[indexSLP].SupplierId == aContracts[index].Supplier_SupplierId){
                         oSupplierContract = aSuppliersSLP[indexSLP];
-                            addressCountry=aSuppliersSLP[indexSLP].AddressCountryCode;
-                        
+                        addressCountry=aSuppliersSLP[indexSLP].AddressCountryCode;
                         
                         break;
                     }
                 }
                 
-               const oCommodityResult = aCommodity.filter((oCommo) => { return oCommo.CommodityCode == oCommodityContract[0].Commodity_CommodityId });
+               const oCommodityResult = aCommodity.filter((oCommo) => { return oCommo.CommodityCode.valueOf() === oCommodityContract[0].Commodity_CommodityId.valueOf() });
                 
-               const oCountryResult = aCountry.filter((oCommo) => { return oCommo.CountryId == addressCountry });
+               const oCountryResult = aCountry.filter((oCommo) => { return oCommo.CountryId.valueOf() === addressCountry.valueOf() });
 
+               if(aContracts[index].ProjectId === "CW32452"){
+               logger.info(aContracts[index].ProjectId);
+               logger.info(aContracts[index].Supplier_SupplierId);
+               logger.info(oCommodityContract[0].Commodity_CommodityId);
+               logger.info(addressCountry);
+               logger.info(oCommodityResult[0].CommodityCode);
+               logger.info(oCountryResult[0].CountryId);
+               }
+
+               
                 if (oCommodityResult.length > 0 && oCountryResult.length > 0) {
 
                     oEntriesActivity.SupplierId = aContracts[index].Supplier_SupplierId;
@@ -171,8 +180,9 @@ function insertData(realm) {
 
                     
                     aEntires.push(oEntriesActivity);
-                    logger.info(aEntires.length);
-                    
+                    //logger.info("Aici avem entries activity!")
+                    //logger.info(oEntriesActivity)
+                    //logger.info(aEntires.length);
                }
 
 
@@ -180,9 +190,9 @@ function insertData(realm) {
             }
 
            
-            
+            logger.info(aEntires.length)
             const uniqueArray = removeDuplicatesFromArray(aEntires);
-            console.log(uniqueArray);
+            logger.info(uniqueArray.length);
 
             await srv.run(INSERT.into("sap.ariba.ActivityRisk", uniqueArray));
             logger.info("Insert with success!")

@@ -19,6 +19,7 @@ service sac @(path:'/sac')    {
 
     @readonly
     entity CountryRiskScores as projection on entities.CountryRiskScores;
+    
     @readonly
     entity CommodityRiskScores as projection on entities.CommodityRiskScores;
     @readonly

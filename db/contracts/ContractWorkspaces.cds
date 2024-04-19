@@ -32,7 +32,7 @@ entity ContractWorkspaces: managed,types.customFields  {
         ProcessStatus                   : String(50);
         Contract                        : types.contract;
         HierarchyType                   : String(25);
-        Supplier                        : types.supplier;
+    key Supplier                        : types.supplier;
         ContractId                      : String(50);
         DocumentVersion                 : String(10);
         ParentAgreement                 : types.projectInfo;
