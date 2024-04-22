@@ -73,7 +73,7 @@ function insertData(realm) {
                  ESG02_FundamentalLaborRights:0, ESG03_UnequalTreatmentScore:0, ESG05_NaturalLivelihoodScore:0,
                  ESG06_SecurityForceScore:0, ESG07_ForceLaborScore:0, ESG08_FreedomOfAssociationScore:0,
                  ESG09_ViolationOfReasonableWagesScore:0, ESG10_IllegalViolationOfLandScore:0,
-                 PoliticalStabilityScore:0 }
+                 PoliticalStabilityScore:0, LkSG_Exposure:0, LkSG_Priority:0 }
 
                 for(var indexSLP in aSuppliersSLP){
                     if(aSuppliersSLP[indexSLP].SupplierId == aActivityRisk[index].SupplierId){

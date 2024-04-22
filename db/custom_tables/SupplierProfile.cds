@@ -37,5 +37,7 @@ entity SupplierProfile: managed  {
         ESG09_ViolationOfReasonableWagesScore : Double;
         ESG10_IllegalViolationOfLandScore     : Double;
         PoliticalStabilityScore               : Double;
+        LkSG_Exposure: Double;
+        LkSG_Priority: Double;
         
 }

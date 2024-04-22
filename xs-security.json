@@ -1,6 +1,6 @@
 {
   "xsappname": "btp-procurement-data-extractor",
-  "tenant-mode"   : "shared",
+  "tenant-mode": "shared",
   "scopes": [
     {
       "name": "$XSAPPNAME.JobScheduler",
@@ -34,5 +34,6 @@
       "https://bocauth.us1.sapbusinessobjects.cloud:443/**",
       "https://bocauth.us1.sapbusinessobjects.cloud:443"
     ]
-  }
+  },
+  "attributes": []
 }

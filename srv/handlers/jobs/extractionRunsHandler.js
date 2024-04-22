@@ -129,6 +129,7 @@ async function extractSupplierData (context, next) {
         };
         await srv.run ( INSERT.into ("sap.ariba.Jobs") .entries (oJob) );
         await srv.commit();
+        await srv.begin();
 
         let oRequestConfig = await _getSupplierDataRequestConfig(realm);
 
@@ -218,6 +219,7 @@ async function extractSupplierData (context, next) {
 
                 await srv.run ( UPDATE ("sap.ariba.Jobs") .set (oJob) .where ({ jobId : oJob.jobId, Realm: oJob.Realm }) );
                 await srv.commit();
+                await srv.begin();
 
             } catch(e) {
                 // Rate limits HIT; store latest pageToken in DB and start from there once newly triggered
@@ -232,6 +234,7 @@ async function extractSupplierData (context, next) {
                 await srv.begin(e);
                 await srv.run ( INSERT.into ("sap.ariba.Job_Pages") .entries (oJobPage) );
                 await srv.commit();
+                await srv.begin();
 
                 // Stop the Loop!
                 sRepeat = false;
@@ -262,6 +265,7 @@ async function extractSupplierData (context, next) {
         await srv.begin(oJob);
         await srv.run ( UPDATE ("sap.ariba.Jobs") .set (oJob) .where ({ jobId : oJob.jobId, Realm: oJob.Realm }) );
         await srv.commit();
+        await srv.begin();
 
         logger.info(`Extraction run finished!`);
 

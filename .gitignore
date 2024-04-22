@@ -12,3 +12,6 @@ resources/LocalDebug/viewGenerator.js
 
 ### resources not relevant for mission
 resources/LocalDebug/*
+
+# added by cds
+.cdsrc-private.json
