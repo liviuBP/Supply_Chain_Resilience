@@ -22,14 +22,22 @@ function insertData(realm) {
  
         try {
 
-             srv.run(DELETE.from("sap.ariba.CountryRiskScores"))
+            logger.info("CHECK_SRV_RUN_CRS");
+            srv.run(DELETE.from("sap.ariba.CountryRiskScores"))
             
 
              
  
             for (var index in aData) {
                 
-               //logger.info(aData[index])
+                logger.info("LEO_TEST");
+                if(aData[index].LkSG_Activated !== 0 && aData[index].LkSG_Activated !== 1){
+
+                    aData[index].LkSG_Activated = 1;
+
+                } //LB
+                logger.info("LEO_TEST_2");
+
                 await srv.run(INSERT.into("sap.ariba.CountryRiskScores").entries(aData[index]));
                 //logger.info("Insert executed for line  " + aData[index].Realm + " country id " + aData[index].CountryId);
             }

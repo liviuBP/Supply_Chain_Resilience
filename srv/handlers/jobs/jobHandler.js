@@ -52,6 +52,7 @@ async function createCustomJob(context, next) {
             break;
             //case EXT_ProcessAll to run the entire workflow
       //  default:
+      
     }     
     return 'OK';
 };
@@ -201,12 +202,15 @@ async function _GetJobDateRange(realm, viewTemplateName, oFilterCriteria) {
 
             } else {
                 logger.info(`No previous occurence, initial load for ${viewTemplateName} in realm ${realm}`);
+                
                 // only consider provided Filter Criteria for initial load of full-load
                 range = {
                     initialLoad: true,
                     updatedDateTo: oFilterCriteria && oFilterCriteria.updatedDateTo,
                     updatedDateFrom: oFilterCriteria && oFilterCriteria.updatedDateFrom
                 }
+
+                
             }
             resolve(range);
         } catch (e) {
