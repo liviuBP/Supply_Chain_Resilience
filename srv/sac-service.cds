@@ -25,6 +25,9 @@ service sac @(path:'/sac')    {
     @readonly
     entity Jobs as projection on entities.Jobs;
 
+    @readonly
+    entity ActualRiskInput as projection on entities.ActualRiskInput; //LB
+
     //end custom data table
     
     @readonly

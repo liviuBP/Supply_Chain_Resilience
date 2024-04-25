@@ -28,6 +28,7 @@ function updateScores(target, source) {
 function insertData(realm) {
 
     var aEntires = [];
+    var aNewEntries = []; 
 
     var aData = readCSVFile.getDataFromCSVFile("SuppliersTax.xlsx");
 
@@ -43,7 +44,11 @@ function insertData(realm) {
         
         const srv = cds.transaction();
 
+        //logger.info("BEFORE_CRS_READ");//LB
+
         let aCountry = await srv.run(SELECT.from("sap.ariba.CountryRiskScores"));
+        //logger.info("AFTER_CRS_READ");//LB
+
         
 
         let aActivityRisk = await srv.run(SELECT.from("sap.ariba.ActivityRisk"));
@@ -73,12 +78,16 @@ function insertData(realm) {
                  ESG02_FundamentalLaborRights:0, ESG03_UnequalTreatmentScore:0, ESG05_NaturalLivelihoodScore:0,
                  ESG06_SecurityForceScore:0, ESG07_ForceLaborScore:0, ESG08_FreedomOfAssociationScore:0,
                  ESG09_ViolationOfReasonableWagesScore:0, ESG10_IllegalViolationOfLandScore:0,
-                 PoliticalStabilityScore:0, LkSG_Exposure:0, LkSG_Priority:0 }
+                 PoliticalStabilityScore:0, LkSG_Exposure:0, LkSG_Priority:0, Actual_OverallRisk:0, 
+                 Actual_AntiBriberyAntiCorruption:0, Actual_SustainabilityScore:0, Actual_NaturalDisasterScore:0, 
+                 Actual_OverallRisk_previous:0, Actual_AntiBriberyAntiCorruption_previous:0, Actual_SustainabilityScore_previous:0,
+                 Actual_NaturalDisasterScore_previous:0 }
 
                 for(var indexSLP in aSuppliersSLP){
                     if(aSuppliersSLP[indexSLP].SupplierId == aActivityRisk[index].SupplierId){
                         oEntriesSupplier.AddressCity = aSuppliersSLP[indexSLP].AddressCity;
                         oEntriesSupplier.SupplierName = aSuppliersSLP[indexSLP].SupplierName;
+                        
                         break;
                     }}
 
@@ -211,8 +220,43 @@ function insertData(realm) {
 
                     oEntriesSupplier.PoliticalStabilityScore = aActivityRisk[index].PoliticalStabilityScore;
 
+                    oEntriesSupplier.LkSG_Exposure = 0;
+
                     
                     countRisk = countRisk + 1;
+
+                    /* LkSG_Exposure = 0; //LB
+
+                    if(LkSG_Exposure >= 60 && BusinessImpact >= 60){ //LB
+
+                        LkSG_Priority = 1
+
+                    } else if(LkSG_Exposure >= 60 || BusinessImpact >= 60){
+
+                        LkSG_Priority = 2
+
+                    } else if(LkSG_Exposure < 60 && BusinessImpact < 60){
+
+                        LkSG_Priority = 3
+
+                    } */
+
+
+                    /* oEntriesSupplier.LkSG_Exposure = 0;
+                    if(oEntriesSupplier.LkSG_Exposure >= 60 && oEntriesSupplier.BusinessImpact >= 60){ //LB
+
+                        oEntriesSupplier.LkSG_Priority = 1
+
+                    } else if(oEntriesSupplier.LkSG_Exposure >= 60 || oEntriesSupplier.BusinessImpact >= 60){
+
+                        oEntriesSupplier.LkSG_Priority = 2
+
+                    } else if(oEntriesSupplier.LkSG_Exposure < 60 && oEntriesSupplier.BusinessImpact < 60){
+
+                        oEntriesSupplier.LkSG_Priority = 3
+
+                    }  */
+
 
                     
                     //logger.info(oEntriesSupplier);
@@ -222,6 +266,16 @@ function insertData(realm) {
                 
 
             }
+                /* aNewEntries = aEntires;
+                logger.info('LEOTEST');
+                for(let newEntry of aNewEntries){ //LB
+
+                    newEntry.LkSG_Exposure = (newEntry.ESG02_Pollution + newEntry.ESG04_Biodiversity + newEntry.ESG05_ResourcesAndCircularEconomy+
+                                                newEntry.ESG01_ChildLaborScore + newEntry.ESG02_FundamentalLaborRights + newEntry.ESG03_UnequalTreatmentScore+
+                                                newEntry.ESG05_NaturalLivelihoodScore + newEntry.ESG06_SecurityForceScore + newEntry.ESG07_ForceLaborScore+
+                                                newEntry.ESG08_FreedomOfAssociationScore + newEntry.ESG09_ViolationOfReasonableWagesScore + newEntry.ESG10_IllegalViolationOfLandScore)/12;
+
+                } */
             
 
             
@@ -258,6 +312,8 @@ function insertData(realm) {
              logger.info(uniqueArray);
              await srv.run(INSERT.into("sap.ariba.SupplierProfile", aEntiresMAX));
             //  logger.info("Insert with success!")
+
+             //await srv.run(INSERT.into("sap.ariba.SupplierProfile", aNewEntries)); //LB
 
              await srv.commit();
 

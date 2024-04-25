@@ -31,6 +31,7 @@ entity CountryRiskScores: managed  {
         ESG09_ViolationOfReasonableWagesScore : String(255);
         ESG10_IllegalViolationOfLandScore     : String(255);
         PoliticalStabilityScore               : String(255);
+        LkSG_Activated: String(255);
         
         
 }
