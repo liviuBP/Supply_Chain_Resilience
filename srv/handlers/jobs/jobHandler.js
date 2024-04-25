@@ -250,6 +250,7 @@ async function UpdateJobStatus(context, next) {
                 delete jobDetails["includeInactive"];
                 delete jobDetails["filters"];
                 delete jobDetails["reportingApp"];
+                delete jobDetails["totalNumOfRecordsProcessed"]; //LB - change done by SAP
 
                 jobDetails["realm"] = job.Realm;
 
