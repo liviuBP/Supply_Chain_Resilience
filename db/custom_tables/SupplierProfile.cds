@@ -36,16 +36,21 @@ entity SupplierProfile : managed {
         ESG09_ViolationOfReasonableWagesScore     : Double;
         ESG10_IllegalViolationOfLandScore         : Double;
         PoliticalStabilityScore                   : Double;
-        LkSG_Exposure                             : Double; //LB
-        LkSG_Priority                             : Double;
-        Actual_OverallRisk                        : Double;
-        Actual_AntiBriberyAntiCorruption          : Double;
-        Actual_SustainabilityScore                : Double;
-        Actual_NaturalDisasterScore               : Double;
-        Actual_OverallRisk_previous               : Double;
-        Actual_AntiBriberyAntiCorruption_previous : Double;
-        Actual_SustainabilityScore_previous       : Double;
-        Actual_NaturalDisasterScore_previous      : Double;
-
+        LkSG_Exposure                             : Double;     //LB
+        LkSG_Priority                             : Double;     //LB
+        Actual_OverallRisk                        : Double;     //LB
+        Actual_AntiBriberyAntiCorruption          : Double;     //LB
+        Actual_SustainabilityScore                : Double;     //LB
+        Actual_NaturalDisasterScore               : Double;     //LB
+        Actual_OverallRisk_previous               : Double;     //LB
+        Actual_AntiBriberyAntiCorruption_previous : Double;     //LB
+        Actual_SustainabilityScore_previous       : Double;     //LB
+        Actual_NaturalDisasterScore_previous      : Double;     //LB
+        SupplyChainRisk                           : Double;     //LB
+        Actual_SupplyChainRisk                    : Double;     //LB
+        Relevant_n_tier                           : Double;     //LB
+        ValidContract                             : String(3);  //LB
+        NoticePeriodRisk                          : Double;     //LB
+        SingleSourced                             : String(3);  //LB
 
 }

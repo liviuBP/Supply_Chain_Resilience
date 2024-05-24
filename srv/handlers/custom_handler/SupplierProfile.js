@@ -32,6 +32,8 @@ function insertData(realm) {
 
     var aData = readCSVFile.getDataFromCSVFile("SuppliersTax.xlsx");
 
+    var aSPData = readCSVFile.getDataFromCSVFile("SupplierProfile.xlsx"); //LB
+
     return new Promise(async function (resolve, reject) {
 
         
@@ -81,7 +83,8 @@ function insertData(realm) {
                  PoliticalStabilityScore:0, LkSG_Exposure:0, LkSG_Priority:0, Actual_OverallRisk:0, 
                  Actual_AntiBriberyAntiCorruption:0, Actual_SustainabilityScore:0, Actual_NaturalDisasterScore:0, 
                  Actual_OverallRisk_previous:0, Actual_AntiBriberyAntiCorruption_previous:0, Actual_SustainabilityScore_previous:0,
-                 Actual_NaturalDisasterScore_previous:0 }
+                 Actual_NaturalDisasterScore_previous:0, SupplyChainRisk:0, Actual_SupplyChainRisk:0, Relevant_n_tier:0, ValidContract: "No", 
+                 NoticePeriodRisk:0, SingleSourced: "No" }
 
                 for(var indexSLP in aSuppliersSLP){
                     if(aSuppliersSLP[indexSLP].SupplierId == aActivityRisk[index].SupplierId){
@@ -107,6 +110,16 @@ function insertData(realm) {
                        
                      }
 
+                     for (let indexSP in aSPData) { //LB
+                        if(aSPData[indexSP].SupplierId == aActivityRisk[index].SupplierId){ 
+                            oEntriesSupplier.Actual_AntiBriberyAntiCorruption = aSPData[indexSP].Actual_AntiBriberyAntiCorruption;
+                            oEntriesSupplier.Actual_SustainabilityScore = aSPData[indexSP].Actual_SustainabilityScore;
+                            oEntriesSupplier.Actual_NaturalDisasterScore = aSPData[indexSP].Actual_NaturalDisasterScore;
+                            break;
+                        }
+                       
+                     }
+
                      
 
                     oEntriesSupplier.SupplierId = aActivityRisk[index].SupplierId;
@@ -120,6 +133,18 @@ function insertData(realm) {
                     oEntriesSupplier.TotalSpent = Math.floor(Math.random() * (1000000 - 100000 + 1)) + 100000;
 
                     oEntriesSupplier.BusinessImpact = Math.floor(Math.random() * 101);
+
+                    //oEntriesSupplier.Actual_AntiBriberyAntiCorruption = Math.floor(Math.random() * 101); //LB
+                    //oEntriesSupplier.Actual_SustainabilityScore = Math.floor(Math.random() * 101); //LB
+                    //oEntriesSupplier.Actual_NaturalDisasterScore = Math.floor(Math.random() * 101); //LB
+                    oEntriesSupplier.Actual_OverallRisk_previous = Math.floor(Math.random() * 101); //LB
+                    oEntriesSupplier.Actual_AntiBriberyAntiCorruption_previous = Math.floor(Math.random() * 101); //LB
+                    oEntriesSupplier.Actual_SustainabilityScore_previous = Math.floor(Math.random() * 101); //LB
+                    oEntriesSupplier.Actual_NaturalDisasterScore_previous = Math.floor(Math.random() * 101); //LB
+                    oEntriesSupplier.Actual_SupplyChainRisk = Math.floor(Math.random() * 101); //LB
+                    oEntriesSupplier.SupplyChainRisk = Math.floor(Math.random() * 101); //LB
+
+
                     
 
 
@@ -242,7 +267,7 @@ function insertData(realm) {
                     } */
 
 
-                    /* oEntriesSupplier.LkSG_Exposure = 0;
+                    oEntriesSupplier.LkSG_Exposure = 0;
                     if(oEntriesSupplier.LkSG_Exposure >= 60 && oEntriesSupplier.BusinessImpact >= 60){ //LB
 
                         oEntriesSupplier.LkSG_Priority = 1
@@ -255,7 +280,25 @@ function insertData(realm) {
 
                         oEntriesSupplier.LkSG_Priority = 3
 
-                    }  */
+                    } 
+
+                    if(oEntriesSupplier.ValidContract !== "Yes" || oEntriesSupplier.ValidContract !== "No"){ //LB
+
+                        oEntriesSupplier.ValidContract = "No"
+
+                    }
+
+                    if(oEntriesSupplier.SingleSourced !== "Yes" && oEntriesSupplier.SingleSourced !== "No"){ //LB
+ 
+                        oEntriesSupplier.ValidContract = "No"
+
+                    }
+
+                    if(oEntriesSupplier.SupplierId === "ACM_60466735" || oEntriesSupplier.SupplierId === "ACM_60250792"){ //LB
+
+                        oEntriesSupplier.Relevant_n_tier = 1;
+
+                    }
 
 
                     
@@ -266,7 +309,7 @@ function insertData(realm) {
                 
 
             }
-                /* aNewEntries = aEntires;
+                aNewEntries = aEntires;
                 logger.info('LEOTEST');
                 for(let newEntry of aNewEntries){ //LB
 
@@ -275,7 +318,15 @@ function insertData(realm) {
                                                 newEntry.ESG05_NaturalLivelihoodScore + newEntry.ESG06_SecurityForceScore + newEntry.ESG07_ForceLaborScore+
                                                 newEntry.ESG08_FreedomOfAssociationScore + newEntry.ESG09_ViolationOfReasonableWagesScore + newEntry.ESG10_IllegalViolationOfLandScore)/12;
 
-                } */
+                }
+
+                for(let anotherNewEntry of aNewEntries){ //LB
+
+                    anotherNewEntry.Actual_OverallRisk = (anotherNewEntry.Actual_AntiBriberyAntiCorruption + anotherNewEntry.Actual_SustainabilityScore + anotherNewEntry.Actual_NaturalDisasterScore+
+                                                            anotherNewEntry.Actual_OverallRisk_previous + anotherNewEntry.Actual_AntiBriberyAntiCorruption_previous + 
+                                                            anotherNewEntry.Actual_SustainabilityScore_previous + anotherNewEntry.Actual_NaturalDisasterScore_previous)/7
+
+                }
             
 
             
