@@ -60,8 +60,8 @@ modules:
      tasks:
      - name: deploy_to_postgresql
        command: chmod 755 deploy.sh && ./deploy.sh
-       disk-quota: 2GB
-       memory: 2GB
+       disk-quota: 4GB
+       memory: 4GB
    build-parameters:
      ignore: ["node_modules/"]
    requires:

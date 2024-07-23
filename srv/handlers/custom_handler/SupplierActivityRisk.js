@@ -53,14 +53,18 @@ function insertData(realm) {
             for (var index in aContracts) {
                 
 
-                var oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0,
+                /* var oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0,
                                          SustainabilityScore:0, NaturalDisasterScore:0, SustainabilityEnvironmental:0,
                                          SustanabilityHumanRights:0, E01_ClimateChange:0, ESG02_Pollution:0, E03_WaterResources:0,
                                          ESG04_Biodiversity:0, ESG05_ResourcesAndCircularEconomy:0, ESG01_ChildLaborScore:0,
                                          ESG02_FundamentalLaborRights:0, ESG03_UnequalTreatmentScore:0, ESG05_NaturalLivelihoodScore:0,
                                          ESG06_SecurityForceScore:0, ESG07_ForceLaborScore:0, ESG08_FreedomOfAssociationScore:0,
                                          ESG09_ViolationOfReasonableWagesScore:0, ESG10_IllegalViolationOfLandScore:0,
-                                         PoliticalStabilityScore:0}
+                                         PoliticalStabilityScore:0} */
+                
+                var oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0,
+                                         SustainabilityScore:0, NaturalDisasterScore:0, ESG01:0, ESG02:0, ESG03:0, ESG04:0, ESG05:0, 
+                                         ESG06:0, ESG07:0, ESG08:0, ESG09:0, ESG10:0 }
                                          
 
                 const oCommodityContract = aContractCommodities.filter((oCommo) => { return oCommo.ContractWorkspace_ProjectId == aContracts[index].ProjectId });
@@ -106,7 +110,73 @@ function insertData(realm) {
                     const convertedDisasterScore = parseFloat(oCountryResult[0].NaturalDisasterScore);
 
                     oEntriesActivity.NaturalDisasterScore=convertedDisasterScore;
-                    oEntriesActivity.SustainabilityScore = (convertedSustainAbilityCountry + convertedSustainAbilityCommodity) / 2;
+                    //oEntriesActivity.SustainabilityScore = (convertedSustainAbilityCountry + convertedSustainAbilityCommodity) / 2;
+
+                    // new ESG01 - updated LB
+                    const convertedLabourRightsCountry = parseFloat(oCountryResult[0].ESG01);
+                    const convertedLabourRightsCommodity = parseFloat(oCommodityResult[0].ESG01);
+                    oEntriesActivity.ESG01 = (convertedLabourRightsCountry + convertedLabourRightsCommodity) / 2;
+                  
+
+                    // new ESG02 - updated LB
+                    const convertedPolutionCountry = parseFloat(oCountryResult[0].ESG02);
+                    const convertedPolutionCommodity = parseFloat(oCommodityResult[0].ESG02);
+                    oEntriesActivity.ESG02 = (convertedPolutionCountry + convertedPolutionCommodity) / 2;
+
+                    
+                    // new ESG03 - updated LB
+                    const convertedUnequalTreatmentCountry = parseFloat(oCountryResult[0].ESG03);
+                    const convertedUnequalTreatmentCommodity = parseFloat(oCommodityResult[0].ESG03);
+                    oEntriesActivity.ESG03 = (convertedUnequalTreatmentCountry + convertedUnequalTreatmentCommodity) / 2;
+
+                    
+                    // new ESG04 - updated LB
+                    const convertedBiodiversityCountry = parseFloat(oCountryResult[0].ESG04);
+                    const convertedBiodiversityCommodity = parseFloat(oCommodityResult[0].ESG04);
+                    oEntriesActivity.ESG04 = (convertedBiodiversityCountry + convertedBiodiversityCommodity) / 2;
+
+
+                    // new ESG05 - updated LB
+                    const convertedNaturalLivelihoodCountry = parseFloat(oCountryResult[0].ESG05);
+                    const convertedNaturalLivelihoodCommodity = parseFloat(oCommodityResult[0].ESG05);
+                    oEntriesActivity.ESG05 = (convertedNaturalLivelihoodCountry + convertedNaturalLivelihoodCommodity) / 2;
+
+
+                    // new ESG06 - updated LB
+                    const convertedSecurityCountry = parseFloat(oCountryResult[0].ESG06);
+                    const convertedSecurityCommodity = parseFloat(oCommodityResult[0].ESG06);
+                    oEntriesActivity.ESG06 = (convertedSecurityCountry + convertedSecurityCommodity) / 2;
+
+                    
+                    // new ESG07 - updated LB
+                    const convertedForceLaborCountry = parseFloat(oCountryResult[0].ESG07);
+                    const convertedForceLaborCommodity = parseFloat(oCommodityResult[0].ESG07);
+                    oEntriesActivity.ESG07 = (convertedForceLaborCountry + convertedForceLaborCommodity) / 2;
+
+                    
+                    // new ESG08 - updated LB
+                    const convertedFreedomAssociationCountry = parseFloat(oCountryResult[0].ESG08);
+                    const convertedFreedomAssociationCommodity = parseFloat(oCommodityResult[0].ESG08);
+                    oEntriesActivity.ESG08 = (convertedFreedomAssociationCountry + convertedFreedomAssociationCommodity) / 2;
+
+
+                    // new ESG09 - updated LB
+                    const convertedViolationWagesCountry = parseFloat(oCountryResult[0].ESG09);
+                    const convertedViolationWagesCommodity = parseFloat(oCommodityResult[0].ESG09);
+                    oEntriesActivity.ESG09 = (convertedViolationWagesCountry + convertedViolationWagesCommodity) / 2;
+
+
+                    // new ESG10 - updated LB
+                     const convertedIllegalLandscapeCountry = parseFloat(oCountryResult[0].ESG10);
+                     const convertedIllegalLandscapeCommodity = parseFloat(oCommodityResult[0].ESG10);
+                     oEntriesActivity.ESG10 = (convertedIllegalLandscapeCountry + convertedIllegalLandscapeCommodity) / 2;
+
+                    // new SustainabilityScore - updated LB
+                     oEntriesActivity.SustainabilityScore = (oEntriesActivity.ESG01 + oEntriesActivity.ESG02 + oEntriesActivity.ESG03 + oEntriesActivity.ESG04
+                                                                + oEntriesActivity.ESG05 + oEntriesActivity.ESG06 + oEntriesActivity.ESG07 + oEntriesActivity.ESG08 
+                                                                + oEntriesActivity.ESG09 + oEntriesActivity.ESG10) / 10;
+
+                    /*
 
                     //SustainabilityEnvironmental
                     const convertedEnvironmental = parseFloat(oCountryResult[0].SustainabilityEnvironmental);
@@ -172,11 +242,11 @@ function insertData(realm) {
 
                     //ESG10
                     const convertedIllegalLandscape = parseFloat(oCountryResult[0].ESG10_IllegalViolationOfLandScore);
-                    oEntriesActivity.ESG10_IllegalViolationOfLandScore = (convertedIllegalLandscape + convertedSustainAbilityCommodity) / 2;
+                    oEntriesActivity.ESG10_IllegalViolationOfLandScore = (convertedIllegalLandscape + convertedSustainAbilityCommodity) / 2; */
 
                     //PoliticalScore
-                    const convertedPolitical = parseFloat(oCountryResult[0].PoliticalStabilityScore);
-                    oEntriesActivity.PoliticalStabilityScore = convertedPolitical;
+                    //const convertedPolitical = parseFloat(oCountryResult[0].PoliticalStabilityScore);
+                    //oEntriesActivity.PoliticalStabilityScore = convertedPolitical;
 
                     
                     aEntires.push(oEntriesActivity);

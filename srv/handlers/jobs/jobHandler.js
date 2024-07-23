@@ -18,6 +18,9 @@ const countryRiskHandler = require('../custom_handler/CountryRiskScoresHandler')
 const CommodityRiskHandler = require('../custom_handler/CommodityRiskScoresHandler');
 const SupplierActivityRiskHandler = require('../custom_handler/SupplierActivityRisk.js');
 const SupplierProfile = require('../custom_handler/SupplierProfile.js');
+const ActualRiskInput = require('../custom_handler/ActualRiskInputHandler');
+const RiskIndicators = require('../custom_handler/RiskIndicatorsHandler');
+const SupplierNetwork = require('../custom_handler/SupplierNetworkHandler');
 
 // //Don't seem to be used anymore
 // const { resolve } = require("@sap/cds");
@@ -50,6 +53,22 @@ async function createCustomJob(context, next) {
             await SupplierProfile.insertData(realm);
             logger.info("SupplierProfile processed, no additional job request");
             break;
+        case "EXT_ActualRiskInput":
+            logger.info(`Processing  ${viewTemplateName}`);
+            await ActualRiskInput.insertData(realm);
+            logger.info("ActualRiskInput processed, no additional job request");
+            break;
+        case "EXT_RiskIndicators":
+            logger.info(`Processing  ${viewTemplateName}`);
+            await RiskIndicators.insertData(realm);
+            logger.info("RiskIndicators processed, no additional job request");
+            break;
+        case "EXT_SupplierNetwork":
+            logger.info(`Processing  ${viewTemplateName}`);
+            await SupplierNetwork.insertData(realm);
+            logger.info("SupplierNetwork processed, no additional job request");
+            break;
+        
             //case EXT_ProcessAll to run the entire workflow
       //  default:
       

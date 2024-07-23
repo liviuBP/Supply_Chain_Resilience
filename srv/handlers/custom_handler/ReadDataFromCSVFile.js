@@ -3,11 +3,13 @@ function getDataFromCSVFile(CSVfile) {
 
     const XLSX = require('xlsx');
     const path = require('path');
-    const file = path.resolve(__dirname,"CSV",CSVfile);
+    const file = path.resolve(__dirname,"CSV",CSVfile); 
 
     // // Load the Excel file
 
-    const workbook = XLSX.readFile(file);
+    
+    const workbook = XLSX.readFile(file); 
+    //const workbook = XLSX.readFile(file, {cellDates:false}); //LB
 
     // // Select the first sheet
 

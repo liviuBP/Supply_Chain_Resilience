@@ -15,6 +15,15 @@ entity CommodityRiskScores : managed {
         ParentCode                : String(255);
         SupplierPool              : Double;
         AverageSwitchTime         : Double;
-
+        ESG01                     : Double; //LB
+        ESG02                     : Double; //LB
+        ESG03                     : Double; //LB
+        ESG04                     : Double; //LB
+        ESG05                     : Double; //LB
+        ESG06                     : Double; //LB
+        ESG07                     : Double; //LB
+        ESG08                     : Double; //LB
+        ESG09                     : Double; //LB
+        ESG10                     : Double; //LB
 
 }
