@@ -46,6 +46,7 @@ entity SupplierProfile : managed {
         ESG08                                     : Double; //LB
         ESG09                                     : Double; //LB
         ESG10                                     : Double; //LB
+        ESG11                                     : Double; //LB
         LkSG_Exposure                             : Double; //LB
         LkSG_Priority                             : Double; //LB
         Actual_OverallRisk                        : Double; //LB

@@ -64,7 +64,7 @@ function insertData(realm) {
                 
                 var oEntriesActivity = { SupplierId: "", CommodityId: "", CountryId: "", AntiBriberyAntiCorruption: 0,
                                          SustainabilityScore:0, NaturalDisasterScore:0, ESG01:0, ESG02:0, ESG03:0, ESG04:0, ESG05:0, 
-                                         ESG06:0, ESG07:0, ESG08:0, ESG09:0, ESG10:0 }
+                                         ESG06:0, ESG07:0, ESG08:0, ESG09:0, ESG10:0, ESG11:0}
                                          
 
                 const oCommodityContract = aContractCommodities.filter((oCommo) => { return oCommo.ContractWorkspace_ProjectId == aContracts[index].ProjectId });
@@ -170,6 +170,11 @@ function insertData(realm) {
                      const convertedIllegalLandscapeCountry = parseFloat(oCountryResult[0].ESG10);
                      const convertedIllegalLandscapeCommodity = parseFloat(oCommodityResult[0].ESG10);
                      oEntriesActivity.ESG10 = (convertedIllegalLandscapeCountry + convertedIllegalLandscapeCommodity) / 2;
+
+                     // new ESG11 - updated LB
+                     const convertedEUDRCountry = parseFloat(oCountryResult[0].ESG11);
+                     const convertedEUDRCommodity = parseFloat(oCommodityResult[0].ESG11);
+                     oEntriesActivity.ESG11 = (convertedEUDRCountry + convertedEUDRCommodity) / 2;
 
                     // new SustainabilityScore - updated LB
                      oEntriesActivity.SustainabilityScore = (oEntriesActivity.ESG01 + oEntriesActivity.ESG02 + oEntriesActivity.ESG03 + oEntriesActivity.ESG04

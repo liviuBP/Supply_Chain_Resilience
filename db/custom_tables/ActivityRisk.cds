@@ -1,18 +1,16 @@
 namespace sap.ariba;
-using { managed } from '@sap/cds/common';
 
+using {managed} from '@sap/cds/common';
 using sap.ariba.type as types from '../types';
 
-entity ActivityRisk: managed  {
+entity ActivityRisk : managed {
 
-    key SupplierId                            : String(255);
-    key CommodityId                           : String(255);
-    key CountryId                             : String(255);
-
-        AntiBriberyAntiCorruption             : Double;
-        SustainabilityScore                   : Double;
-        NaturalDisasterScore                  : Double;
-
+    key SupplierId                : String(255);
+    key CommodityId               : String(255);
+    key CountryId                 : String(255);
+        AntiBriberyAntiCorruption : Double;
+        SustainabilityScore       : Double;
+        NaturalDisasterScore      : Double;
         //SustainabilityEnvironmental           : Double;
         //SustanabilityHumanRights              : Double;
         //E01_ClimateChange                     : Double;
@@ -30,15 +28,15 @@ entity ActivityRisk: managed  {
         //ESG09_ViolationOfReasonableWagesScore : Double;
         //ESG10_IllegalViolationOfLandScore     : Double;
         //PoliticalStabilityScore               : Double;
-        ESG01                                     : Double; //LB
-        ESG02                                     : Double; //LB
-        ESG03                                     : Double; //LB
-        ESG04                                     : Double; //LB
-        ESG05                                     : Double; //LB
-        ESG06                                     : Double; //LB
-        ESG07                                     : Double; //LB
-        ESG08                                     : Double; //LB
-        ESG09                                     : Double; //LB
-        ESG10                                     : Double; //LB
-        
+        ESG01                     : Double; //LB
+        ESG02                     : Double; //LB
+        ESG03                     : Double; //LB
+        ESG04                     : Double; //LB
+        ESG05                     : Double; //LB
+        ESG06                     : Double; //LB
+        ESG07                     : Double; //LB
+        ESG08                     : Double; //LB
+        ESG09                     : Double; //LB
+        ESG10                     : Double; //LB
+        ESG11                     : Double; //LB
 }

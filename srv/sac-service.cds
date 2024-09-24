@@ -28,7 +28,8 @@ service sac @(path:'/sac')    {
     @readonly
     entity ActualRiskInput as projection on entities.ActualRiskInput; //LB
     entity RiskIndicators as projection on entities.RiskIndicators; //LB
-    entity SupplierNetwork as projection on entities.SupplierNetwork; //LB
+    //entity SupplierNetwork as projection on entities.SupplierNetwork; //LB
+    entity SuppliersNetwork as projection on entities.SuppliersNetwork; //LB
 
     //end custom data table
     

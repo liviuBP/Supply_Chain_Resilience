@@ -42,7 +42,7 @@
     "query": {
       "limit": {
         "default": 100,
-        "max": 5000
+        "max": 100000
       }
     },
     "build": {

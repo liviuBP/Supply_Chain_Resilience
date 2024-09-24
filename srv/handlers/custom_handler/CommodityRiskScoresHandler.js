@@ -78,6 +78,12 @@ function insertData(realm) {
                     aData[index].ESG10 = 0;
 
                 }
+
+                if(aData[index].ESG11 === null || aData[index].ESG11 === undefined){
+
+                    aData[index].ESG11 = 0;
+
+                }
                 //LB
                await srv.run(INSERT.into("sap.ariba.CommodityRiskScores").entries(aData[index]));
                 //logger.info("Insert executed for line  " + aData[index].Realm + " country id " + aData[index].CountryId);

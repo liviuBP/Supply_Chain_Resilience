@@ -22,11 +22,11 @@ function insertData(realm) {
 
         try {
  
-            srv.run(DELETE.from("sap.ariba.SupplierNetwork"))
+            srv.run(DELETE.from("sap.ariba.SuppliersNetwork"))
  
             for (var index in aData) {
                 
-                await srv.run(INSERT.into("sap.ariba.SupplierNetwork").entries(aData[index]));
+                await srv.run(INSERT.into("sap.ariba.SuppliersNetwork").entries(aData[index]));
                 
             }
  

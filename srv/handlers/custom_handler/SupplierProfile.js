@@ -62,6 +62,7 @@ function insertData(realm) {
 
         let aContractWorkspaces = await srv.run(SELECT.from("sap.ariba.ContractWorkspaces")); //LB
         let aSourcingProjects = await srv.run(SELECT.from("sap.ariba.SourcingProjects")); //LB
+        let aActualRiskInput = await srv.run(SELECT.from("sap.ariba.ActualRiskInput")); //LB
 
         
         
@@ -92,7 +93,7 @@ function insertData(realm) {
 
                  let oEntriesSupplier = { SupplierId: "", SupplierName: "", AddressCountry: "", AddressCity: "", TaxId: "",
                  Segmentation: "", PreferredStatus: "", BusinessImpact: "", TotalSpent: 0 , SupplierTier: 0 ,OverallRisk: 0 , AntiBriberyAntiCorruption: 0,
-                 SustainabilityScore:0, NaturalDisasterScore:0, ESG01:0, ESG02:0, ESG03:0, ESG04:0, ESG05:0, ESG06:0, ESG07:0, ESG08:0, ESG09:0, ESG10:0,
+                 SustainabilityScore:0, NaturalDisasterScore:0, ESG01:0, ESG02:0, ESG03:0, ESG04:0, ESG05:0, ESG06:0, ESG07:0, ESG08:0, ESG09:0, ESG10:0, ESG11:0,
                  LkSG_Exposure:0, LkSG_Priority:0, Actual_OverallRisk:0, 
                  Actual_AntiBriberyAntiCorruption:0, Actual_SustainabilityScore:0, Actual_NaturalDisasterScore:0, 
                  Actual_OverallRisk_previous:0, Actual_AntiBriberyAntiCorruption_previous:0, Actual_SustainabilityScore_previous:0,
@@ -113,6 +114,7 @@ function insertData(realm) {
                             oEntriesSupplier.ESG08 = aActivityRisk[index].ESG08;
                             oEntriesSupplier.ESG09 = aActivityRisk[index].ESG09;
                             oEntriesSupplier.ESG10 = aActivityRisk[index].ESG10;
+                            oEntriesSupplier.ESG11 = aActivityRisk[index].ESG11;
 
                             break;
                         }
@@ -363,9 +365,28 @@ function insertData(realm) {
 
                     }
 
-                    if(oEntriesSupplier.SupplierId === "ACM_26977200" || oEntriesSupplier.SupplierId === "ACM_28172094"){ //LB
+                    if(oEntriesSupplier.SupplierId === "ACM_26977200" || oEntriesSupplier.SupplierId === "ACM_60251101" ||
+                        oEntriesSupplier.SupplierId === "ACM_60252436" || oEntriesSupplier.SupplierId === "ACM_60466584" ||
+                            oEntriesSupplier.SupplierId === "ACM_60466742" || oEntriesSupplier.SupplierId === "ACM_60467529"){ //LB
 
                         oEntriesSupplier.Relevant_n_tier = 1;
+
+                    }
+
+                    if(oEntriesSupplier.SupplierId === "ACM_26977146" || oEntriesSupplier.SupplierId === "ACM_26977200" ||
+                        oEntriesSupplier.SupplierId === "ACM_28172094" || oEntriesSupplier.SupplierId === "ACM_28203679" ||
+                            oEntriesSupplier.SupplierId === "ACM_45208446" || oEntriesSupplier.SupplierId === "ACM_48779666" ||
+                            oEntriesSupplier.SupplierId === "ACM_57544115" || oEntriesSupplier.SupplierId === "ACM_60247084" ||
+                            oEntriesSupplier.SupplierId === "ACM_60463392" || oEntriesSupplier.SupplierId === "ACM_60250792" ||
+                            oEntriesSupplier.SupplierId === "ACM_60473417" || oEntriesSupplier.SupplierId === "ACM_60251207" || 
+                            oEntriesSupplier.SupplierId === "ACM_60251101"){ //LB *** Values for LkSG_Letter_Sent ***
+
+                        oEntriesSupplier.LkSG_Letter_Sent = "Yes";
+                        oEntriesSupplier.LkSG_Letter_Sent_date = "15.06.2024"
+
+                    } else {
+
+                        oEntriesSupplier.LkSG_Letter_Sent = "No";
 
                     }
 
@@ -592,6 +613,112 @@ function insertData(realm) {
                     aEntiresMAX[SCIndex].LkSG_Priority = 3
                                                 
                 } 
+
+                // *** LkSG_Actual_Exposure NEW
+                if(aEntiresMAX[SCIndex].LkSG_Exposure < 30){ //LB
+
+                    aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aEntiresMAX[SCIndex].LkSG_Exposure;
+                                                
+                } else if(aEntiresMAX[SCIndex].LkSG_Exposure >= 30 && aEntiresMAX[SCIndex].LkSG_Exposure <= 60){ //LB
+
+                        if(aEntiresMAX[SCIndex].LkSG_Letter_Sent == "No"){
+
+                            aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aEntiresMAX[SCIndex].LkSG_Exposure;
+                            
+                        } else if (aEntiresMAX[SCIndex].LkSG_Letter_Sent == "Yes"){
+
+                            aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aEntiresMAX[SCIndex].LkSG_Exposure - 20;
+                            
+                        } else if (aEntiresMAX[SCIndex].LkSG_Letter_Sent == "" || aEntiresMAX[SCIndex].LkSG_Letter_Sent == undefined || aEntiresMAX[SCIndex].LkSG_Letter_Sent == null ){
+
+                            aEntiresMAX[SCIndex].LkSG_Actual_Exposure = 0;
+                            
+                        }
+                                                
+                } else if (aEntiresMAX[SCIndex].LkSG_Exposure >= 60 ){ //LB
+
+                    var sCheckEntiresID = aEntiresMAX[SCIndex].SupplierId;
+                    for(var x = 0; x<aActualRiskInput.length; x++){
+                        var sCheckActualRiskID = aActualRiskInput[x].SupplierId;
+                        if(sCheckActualRiskID === sCheckEntiresID){
+                            var sCheckAssessRD = aActualRiskInput[x].AssessmentRiskDomain;
+                            if(sCheckAssessRD !== "sustainability"){
+
+                                aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aEntiresMAX[SCIndex].LkSG_Exposure;
+
+                            } else if(sCheckAssessRD === "sustainability"){
+
+                                    // *** determine date from 18 Months ago ***
+                                    var currentDate = new Date();
+                                    currentDate.setFullYear(currentDate.getFullYear()-1);
+                                    currentDate.setMonth(currentDate.getMonth()-6);
+                                    var dateToCompareWith = currentDate.toLocaleDateString();
+                                    // ***
+                                    var dayToCompareWith = dateToCompareWith.split('/')[1];
+                                    var monthToCompareWith = dateToCompareWith.split('/')[0];
+                                    var yearToCompareWith = dateToCompareWith.split('/')[2];
+
+                                    var sCheckAssessDate = aActualRiskInput[x].AssessmentDate.split('.');
+                                    var dayAssessDate = sCheckAssessDate[0];
+                                    var monthAssessDate = sCheckAssessDate[1];
+                                    var yearAssessDate = sCheckAssessDate[2];
+
+                                    // *** compare AssessementDate with date from 18 months ago ***
+
+                                    if (yearAssessDate > yearToCompareWith){
+
+                                        aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aActualRiskInput[x].AssessmentRating;
+
+                                    } else if(yearAssessDate == yearToCompareWith ) {
+
+                                        if(monthAssessDate > monthToCompareWith){
+
+                                            aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aActualRiskInput[x].AssessmentRating;
+
+                                        } else if(monthAssessDate == monthToCompareWith){
+
+                                            if(dayAssessDate >= dayToCompareWith){
+
+                                            aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aActualRiskInput[x].AssessmentRating;
+
+                                            } else {
+
+                                            aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aEntiresMAX[SCIndex].LkSG_Exposure;
+
+                                            }
+                                            
+                                        } else {
+
+                                            aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aEntiresMAX[SCIndex].LkSG_Exposure;
+
+                                        }
+
+                                    } else {
+
+                                        aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aEntiresMAX[SCIndex].LkSG_Exposure;
+
+                                    }
+
+
+                            }
+
+                            
+                            
+
+                            //aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aActualRiskInput[x].AssessmentRating;
+
+                        } /* else {
+
+                            aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aEntiresMAX[SCIndex].LkSG_Exposure;
+
+                        } */
+
+
+                    }
+                    
+                    // aEntiresMAX[SCIndex].LkSG_Actual_Exposure = aEntiresMAX[SCIndex].LkSG_Exposure;
+                                                
+                }
 
             }
             
